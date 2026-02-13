@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile | Founders Monday Global</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👤</text></svg>">
+    
+    <meta name="description" content="Your Founder Profile - Manage your information, track applications, and showcase your startup journey.">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+
+                </div>
+                
+                <nav class="nav">
+                    <a href="index.html"><i class="fas fa-home"></i> Home</a>
+                    <a href="index.html#community"><i class="fas fa-users"></i> Community</a>
+                    <a href="events.html"><i class="fas fa-calendar-alt"></i> Events</a>
+                    <a href="get-featured.html"><i class="fas fa-rocket"></i> Apply Now</a>
+                    
+                    <!-- Profile Dropdown -->
+                    <div class="nav-dropdown">
+                        <a href="#" class="nav-dropdown-toggle profile-toggle">
+                            <i class="fas fa-chevron-down"></i>
+                        </a>
+                        <div class="nav-dropdown-menu">
+                            <a href="portifolio.html" class="active"><i class="fas fa-user"></i> My Profile</a>
+                            <a href="applications.html"><i class="fas fa-file-alt"></i> Applications</a>
+                            <a href="startups.html"><i class="fas fa-briefcase"></i> My Startups</a>
+                            <a href="settings.html"><i class="fas fa-cog"></i> Settings</a>
+                            <div class="dropdown-divider"></div>
+                            <a href="logout.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                        </div>
+                    </div>
+                </nav>
+                
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Profile Header -->
+        <section class="profile-header">
+            <div class="container">
+                <div class="profile-header-content">
+                    <div class="profile-avatar">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Profile Picture">
+                        <button class="avatar-edit-btn" onclick="editAvatar()">
+                            <i class="fas fa-camera"></i>
+                        </button>
+                    </div>
+                    <div class="profile-info">
+                        <h1>John Founder</h1>
+                        <p class="profile-title">CEO & Founder at AgriTech Uganda</p>
+                        <div class="profile-badges">
+                            <span class="badge verified"><i class="fas fa-check-circle"></i> Verified Founder</span>
+                            <span class="badge active"><i class="fas fa-circle"></i> Active Member</span>
+                            <span class="badge member-since"><i class="fas fa-calendar-alt"></i> Member since Jan 2024</span>
+                        </div>
+                    </div>
+                    <div class="profile-actions">
+                        <button class="btn-outline" onclick="editProfile()">
+                            <i class="fas fa-edit"></i> Edit Profile
+                        </button>
+                        <button class="btn-primary" onclick="shareProfile()">
+                            <i class="fas fa-share-alt"></i> Share Profile
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Profile Navigation -->
+        <section class="profile-nav">
+            <div class="container">
+                <nav class="profile-tabs">
+                    <a href="#overview" class="profile-tab active">Overview</a>
+                    <a href="#startups" class="profile-tab">Startups</a>
+                    <a href="#applications" class="profile-tab">Applications</a>
+                    <a href="#achievements" class="profile-tab">Achievements</a>
+                    <a href="#network" class="profile-tab">Network</a>
+                    <a href="#activity" class="profile-tab">Activity</a>
+                </nav>
+            </div>
+        </section>
+
+        <!-- Profile Content -->
+        <div class="profile-content">
+            <div class="container">
+                <div class="profile-grid">
+                    <!-- Left Column -->
+                    <div class="profile-left">
+                        <!-- About Section -->
+                        <section class="profile-card" id="overview">
+                            <div class="card-header">
+                                <h3><i class="fas fa-user-circle"></i> About Me</h3>
+                                <button class="card-edit-btn" onclick="editAbout()">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+                            </div>
+                            <div class="card-body">
+                                <p>Passionate entrepreneur building AgriTech Uganda to connect smallholder farmers with markets using mobile technology. Focused on creating sustainable impact in African agriculture.</p>
+                                
+                                <div class="info-grid">
+                                    <div class="info-item">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <div>
+                                            <span class="info-label">Location</span>
+                                            <span class="info-value">Kampala, Uganda</span>
+                                        </div>
+                                    </div>
+                                    <div class="info-item">
+                                        <i class="fas fa-envelope"></i>
+                                        <div>
+                                            <span class="info-label">Email</span>
+                                            <span class="info-value">john@agritechuganda.com</span>
+                                        </div>
+                                    </div>
+                                    <div class="info-item">
+                                        <i class="fas fa-phone"></i>
+                                        <div>
+                                            <span class="info-label">Phone</span>
+                                            <span class="info-value">+256 700 000 000</span>
+                                        </div>
+                                    </div>
+                                    <div class="info-item">
+                                        <i class="fab fa-linkedin"></i>
+                                        <div>
+                                            <span class="info-label">LinkedIn</span>
+                                            <a href="#" class="info-value">linkedin.com/in/johnfounder</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Startup Stats -->
+                        <section class="profile-card">
+                            <div class="card-header">
+                                <h3><i class="fas fa-chart-line"></i> Startup Statistics</h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="stats-grid">
+                                    <div class="stat-item">
+                                        <span class="stat-number">1,200+</span>
+                                        <span class="stat-label">Farmers Reached</span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <span class="stat-number">40%</span>
+                                        <span class="stat-label">Income Increase</span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <span class="stat-number">$50K</span>
+                                        <span class="stat-label">Funding Raised</span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <span class="stat-number">15</span>
+                                        <span class="stat-label">Team Members</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+
+                    <!-- Right Column -->
+                    <div class="profile-right">
+                        <!-- Featured Startup -->
+                        <section class="profile-card" id="startups">
+                            <div class="card-header">
+                                <h3><i class="fas fa-briefcase"></i> Featured Startup</h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="featured-startup">
+                                    <div class="startup-logo">
+                                        <img src="https://via.placeholder.com/80" alt="AgriTech Uganda">
+                                    </div>
+                                    <div class="startup-info">
+                                        <h4>AgriTech Uganda</h4>
+                                        <p class="startup-desc">Connecting smallholder farmers with markets using mobile technology</p>
+                                        <div class="startup-tags">
+                                            <span class="tag">Agriculture</span>
+                                            <span class="tag">Fintech</span>
+                                            <span class="tag">Mobile</span>
+                                            <span class="tag">Social Impact</span>
+                                        </div>
+                                        <a href="my-startups.html" class="btn-outline">View All Startups</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Recent Applications -->
+                        <section class="profile-card" id="applications">
+                            <div class="card-header">
+                                <h3><i class="fas fa-file-alt"></i> Recent Applications</h3>
+                                <a href="my-applications.html" class="view-all">View All</a>
+                            </div>
+                            <div class="card-body">
+                                <div class="applications-list">
+                                    <div class="application-item">
+                                        <div class="application-status pending">
+                                            <i class="fas fa-clock"></i> Pending
+                                        </div>
+                                        <h5>Weekly Featured Founder</h5>
+                                        <p class="application-date">Submitted: Dec 20, 2024</p>
+                                        <a href="my-applications.html#app1" class="btn-link">View Details →</a>
+                                    </div>
+                                    
+                                    <div class="application-item">
+                                        <div class="application-status approved">
+                                            <i class="fas fa-check-circle"></i> Approved
+                                        </div>
+                                        <h5>Pitch Competition 2025</h5>
+                                        <p class="application-date">Submitted: Dec 15, 2024</p>
+                                        <a href="my-applications.html#app2" class="btn-link">View Details →</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Quick Links -->
+                        <section class="profile-card quick-links-card">
+                            <div class="card-header">
+                                <h3><i class="fas fa-bolt"></i> Quick Actions</h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="quick-links">
+                                    <a href="index.html#get-featured" class="quick-link">
+                                        <i class="fas fa-rocket"></i>
+                                        <span>Apply for Featured Founder</span>
+                                    </a>
+                                    <a href="events.html" class="quick-link">
+                                        <i class="fas fa-calendar-alt"></i>
+                                        <span>Register for Events</span>
+                                    </a>
+                                    <a href="community-guidelines.html" class="quick-link">
+                                        <i class="fas fa-users"></i>
+                                        <span>Community Guidelines</span>
+                                    </a>
+                                    <a href="resources.html" class="quick-link">
+                                        <i class="fas fa-book"></i>
+                                        <span>Access Resources</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <h4>Founders Monday</h4>
+                    <p>Empowering startup founders globally every Monday.</p>
+                </div>
+                <div>
+                    <h4>Account</h4>
+                    <ul class="footer-links">
+                        <li><a href="portifolio.html" class="active">My Profile</a></li>
+                        <li><a href="applications.html">Applications</a></li>
+                        <li><a href="startups.html">My Startups</a></li>
+                        <li><a href="settings.html">Settings</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2025 Founders Monday Global Support. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Profile tab switching
+        document.querySelectorAll('.profile-tab').forEach(tab => {
+            tab.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Update active tab
+                document.querySelectorAll('.profile-tab').forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+                
+                // Scroll to section
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        function editAvatar() {
+            alert('Avatar editor would open here');
+        }
+
+        function editProfile() {
+            alert('Profile editor would open here');
+        }
+
+        function editAbout() {
+            alert('About editor would open here');
+        }
+
+        function shareProfile() {
+            alert('Share profile functionality would open here');
+        }
+    </script>
+</body>
+</html>

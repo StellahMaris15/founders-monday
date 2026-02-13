@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events | Founders Monday Global</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="events.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📅</text></svg>">
+    
+    <!-- Meta tags -->
+    <meta name="description" content="Upcoming events, workshops, and networking sessions for startup founders. Join Founders Monday Global events.">
+    <meta name="keywords" content="startup events, founder workshops, networking, pitch competitions, entrepreneurship events">
+    <meta property="og:title" content="Events | Founders Monday Global">
+    <meta property="og:description" content="Join our upcoming events for startup founders - workshops, networking, pitch competitions, and more.">
+</head>
+<body>
+    <!-- Accessibility Menu -->
+    <div id="accessibilityMenu" class="accessibility-menu">
+        <button class="accessibility-btn" onclick="increaseFontSize()" title="Increase Text Size">
+            <i class="fas fa-text-height"></i> A+
+        </button>
+        <button class="accessibility-btn" onclick="decreaseFontSize()" title="Decrease Text Size">
+            <i class="fas fa-text-height"></i> A-
+        </button>
+        <button class="accessibility-btn" onclick="toggleHighContrast()" title="High Contrast Mode">
+            <i class="fas fa-adjust"></i> Contrast
+        </button>
+        <button class="accessibility-btn" onclick="speakCurrentPage()" title="Read Aloud">
+            <i class="fas fa-volume-up"></i> Read
+        </button>
+        <button class="accessibility-btn" onclick="toggleAccessibilityMenu()" title="Close Menu">
+            <i class="fas fa-times"></i> Close
+        </button>
+    </div>
+
+    <!-- Skip to Main Content -->
+    <a href="#main-content" class="skip-to-main">Skip to main content</a>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+
+                </div>
+                
+                <!-- Navigation Menu -->
+                <nav class="nav">
+                    <a href="index.html"><i class="fas fa-home"></i> Home</a>
+                    <a href="index.html#about"><i class="fas fa-info-circle"></i> About</a>
+                    <a href="index.html#resources"><i class="fas fa-book"></i> Resources</a>
+                    <a href="index.html#spotlight"><i class="fas fa-star"></i> Spotlight</a>
+                    <a href="index.html#winners"><i class="fas fa-trophy"></i> Winners</a>
+                    <a href="index.html#community"><i class="fas fa-users"></i> Community</a>
+                    <a href="events.html" class="active"><i class="fas fa-calendar-alt"></i> Events</a>
+                    <a href="get-featured.html"><i class="fas fa-rocket"></i> Apply Now</a>
+                    
+                    <!-- Account Dropdown -->
+                    <div class="nav-dropdown">
+                        <a href="#" class="nav-dropdown-toggle">
+                            <i class="fas fa-user"></i> Account <i class="fas fa-chevron-down"></i>
+                        </a>
+                        <div class="nav-dropdown-menu">
+                            <a href="login.html"><i class="fas fa-sign-in-alt"></i> Login</a>
+                            <a href="register.html"><i class="fas fa-user-plus"></i> Register</a>
+                            <a href="profile.html"><i class="fas fa-user-circle"></i> My Profile</a>
+                            <a href="dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+                        </div>
+                    </div>
+                </nav>
+                
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Events Hero -->
+        <section class="events-hero">
+            <div class="container">
+                <div class="events-hero-content">
+                    <h1>Upcoming Events for Founders</h1>
+                    <p class="subtitle">Join workshops, networking sessions, pitch competitions, and more to accelerate your startup journey.</p>
+                    
+                    <!-- Quick Stats -->
+                    <div class="quick-stats">
+                        <div class="quick-stat">
+                            <span class="stat-number">5+</span>
+                            <span class="stat-label">Events Monthly</span>
+                        </div>
+                        <div class="quick-stat">
+                            <span class="stat-number">20+</span>
+                            <span class="stat-label">Speakers</span>
+                        </div>
+                        <div class="quick-stat">
+                            <span class="stat-number">100+</span>
+                            <span class="stat-label">Participants</span>
+                        </div>
+                        <div class="quick-stat">
+                            <span class="stat-number">15+</span>
+                            <span class="stat-label">Countries</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Event Filters -->
+                    <div class="event-filters">
+                        <button class="filter-btn active" data-filter="all">All Events</button>
+                        <button class="filter-btn" data-filter="upcoming">Upcoming</button>
+                        <button class="filter-btn" data-filter="past">Past Events</button>
+                        <button class="filter-btn" data-filter="workshop">Workshops</button>
+                        <button class="filter-btn" data-filter="networking">Networking</button>
+                        <button class="filter-btn" data-filter="pitch">Pitch Events</button>
+                        <button class="filter-btn" data-filter="virtual">Virtual</button>
+                        <button class="filter-btn" data-filter="physical">Physical</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Events Calendar -->
+        <section class="events-calendar-section">
+            <div class="container">
+                <h2 class="section-title">Event Calendar</h2>
+                <div class="calendar-controls">
+                    <button class="calendar-nav" id="prevMonth">
+                        <i class="fas fa-chevron-left"></i> Previous
+                    </button>
+                    <h3 id="currentMonth">January 2025</h3>
+                    <button class="calendar-nav" id="nextMonth">
+                        Next <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                
+                <div class="calendar">
+                    <div class="calendar-header">
+                        <div class="day-header">Sun</div>
+                        <div class="day-header">Mon</div>
+                        <div class="day-header">Tue</div>
+                        <div class="day-header">Wed</div>
+                        <div class="day-header">Thu</div>
+                        <div class="day-header">Fri</div>
+                        <div class="day-header">Sat</div>
+                    </div>
+                    <div class="calendar-body" id="calendarBody">
+                        <!-- Calendar days will be populated by JavaScript -->
+                    </div>
+                </div>
+                
+                <!-- Legend -->
+                <div class="calendar-legend">
+                    <div class="legend-item">
+                        <span class="legend-color workshop"></span>
+                        <span>Workshop</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-color networking"></span>
+                        <span>Networking</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-color pitch"></span>
+                        <span>Pitch Event</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-color virtual"></span>
+                        <span>Virtual Event</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Upcoming Events -->
+        <section class="upcoming-events-section light-bg">
+            <div class="container">
+                <h2 class="section-title">Upcoming Events</h2>
+                <p class="section-subtitle">Register for these upcoming opportunities to learn, network, and grow</p>
+                
+                <div class="events-grid">
+                    <!-- Event 1 -->
+                    <div class="event-card featured" data-category="workshop virtual">
+                        <div class="event-badge featured-badge">
+                            <i class="fas fa-star"></i> Featured
+                        </div>
+                        <div class="event-date">
+                            <span class="event-day">15</span>
+                            <span class="event-month">JAN</span>
+                            <span class="event-year">2025</span>
+                        </div>
+                        <div class="event-content">
+                            <div class="event-tags">
+                                <span class="event-tag workshop">Workshop</span>
+                                <span class="event-tag virtual">Virtual</span>
+                            </div>
+                            <h3 class="event-title">Pitch Perfect Workshop</h3>
+                            <p class="event-time">
+                                <i class="far fa-clock"></i> 2:00 PM - 4:00 PM EAT
+                            </p>
+                            <p class="event-description">
+                                Learn how to craft the perfect investor pitch from seasoned entrepreneurs who have successfully raised funding.
+                            </p>
+                            <div class="event-speakers">
+                                <h4><i class="fas fa-microphone"></i> Featured Speakers:</h4>
+                                <div class="speakers-list">
+                                    <div class="speaker">
+                                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="John Founder">
+                                        <span>John Founder</span>
+                                    </div>
+                                    <div class="speaker">
+                                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah Investor">
+                                        <span>Sarah Investor</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="event-stats">
+                                <span><i class="fas fa-users"></i> 85 Registered</span>
+                                <span><i class="fas fa-bolt"></i> 10 Spots Left</span>
+                            </div>
+                            <div class="event-actions">
+                                <a href="events/pitch-workshop.html" class="btn-primary">
+                                    <i class="fas fa-info-circle"></i> Details
+                                </a>
+                            <a href="register.html" class="btn-primary">Register Now</a>
+                                    <i class="fas fa-ticket-alt"></i> Register
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Event 2 -->
+                    <div class="event-card" data-category="networking virtual">
+                        <div class="event-date">
+                            <span class="event-day">22</span>
+                            <span class="event-month">JAN</span>
+                            <span class="event-year">2025</span>
+                        </div>
+                        <div class="event-content">
+                            <div class="event-tags">
+                                <span class="event-tag networking">Networking</span>
+                                <span class="event-tag virtual">Virtual</span>
+                            </div>
+                            <h3 class="event-title">Investor Connect Session</h3>
+                            <p class="event-time">
+                                <i class="far fa-clock"></i> 3:00 PM - 5:00 PM EAT
+                            </p>
+                            <p class="event-description">
+                                Meet angel investors and venture capitalists actively looking to invest in promising African startups.
+                            </p>
+                            <div class="event-speakers">
+                                <h4><i class="fas fa-microphone"></i> Participating Investors:</h4>
+                                <div class="speakers-list">
+                                    <div class="speaker">
+                                        <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="David VC">
+                                        <span>David VC</span>
+                                    </div>
+                                    <div class="speaker">
+                                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Grace Angel">
+                                        <span>Grace Angel</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="event-stats">
+                                <span><i class="fas fa-users"></i> 120 Registered</span>
+                                <span><i class="fas fa-bolt"></i> Limited Spots</span>
+                            </div>
+                            <div class="event-actions">
+                                <a href="events/investor-connect.html" class="btn-primary">
+                                    <i class="fas fa-info-circle"></i> Details
+                                </a>
+                                <a href="register.html" class="btn-primary">Register Now</a>
+                                    <i class="fas fa-ticket-alt"></i> Register
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                <!-- Load More Button -->
+                <div class="text-center" style="margin-top: 3rem;">
+                    <button class="btn-outline" id="loadMoreEvents">
+                        <i class="fas fa-plus"></i> Load More Events
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Past Events -->
+        <section class="past-events-section">
+            <div class="container">
+                <h2 class="section-title">Past Events Gallery</h2>
+                <p class="section-subtitle">Relive the moments from our previous successful events</p>
+                
+                <div class="events-gallery">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Pitch Competition">
+                        <div class="gallery-overlay">
+                            <h4>December Pitch Competition</h4>
+                            <p>30 Dec 2025 | 100+ Attendees</p>
+                            <a href="gallery/pitch-dec-2024.html" class="btn-outline">View Photos</a>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Workshop">
+                        <div class="gallery-overlay">
+                            <h4>Marketing Workshop</h4>
+                            <p>8 Jan 2026 | Virtual Event</p>
+                            <a href="gallery/marketing-workshop.html" class="btn-outline">View Photos</a>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Networking">
+                        <div class="gallery-overlay">
+                            <h4>Founder Networking Night</h4>
+                            <p>1 Dec 2026 | Kampala</p>
+                            <a href="gallery/nairobi-networking.html" class="btn-outline">View Photos</a>
+                        </div>
+                    </div>
+                    
+                    
+                <div class="text-center" style="margin-top: 3rem;">
+                    <a href="gallery.html" class="btn-primary">
+                        <i class="fas fa-images"></i> View All Past Events
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Event Categories -->
+        <section class="event-categories-section light-bg">
+            <div class="container">
+                <h2 class="section-title">Event Categories</h2>
+                <p class="section-subtitle">Find events that match your interests and needs</p>
+                
+                <div class="categories-grid">
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                        </div>
+                        <h3>Workshops</h3>
+                        <p>Hands-on learning sessions on specific topics like pitching, marketing, legal, and more.</p>
+                        <a href="#workshop" class="category-link">View Workshops →</a>
+                    </div>
+                    
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3>Networking</h3>
+                        <p>Connect with fellow founders, investors, mentors, and potential collaborators.</p>
+                        <a href="#networking" class="category-link">View Networking Events →</a>
+                    </div>
+                    
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-microphone"></i>
+                        </div>
+                        <h3>Pitch Events</h3>
+                        <p>Opportunities to pitch your startup to investors and win funding.</p>
+                        <a href="#pitch" class="category-link">View Pitch Events →</a>
+                    </div>
+                    
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>Roundtables</h3>
+                        <p>Small group discussions for deep dives into specific challenges.</p>
+                        <a href="#roundtable" class="category-link">View Roundtables →</a>
+                    </div>
+                    
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <h3>Competitions</h3>
+                        <p>Competitions with prizes for the most promising startups.</p>
+                        <a href="#competition" class="category-link">View Competitions →</a>
+                    </div>
+                    
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3>Masterclasses</h3>
+                        <p>In-depth training sessions from industry experts.</p>
+                        <a href="#masterclass" class="category-link">View Masterclasses →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Testimonials -->
+        <section class="event-testimonials accent-bg">
+            <div class="container">
+                <h2 class="section-title">What Founders Say About Our Events</h2>
+                
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"The pitch workshop completely transformed how I present my startup. I secured my first investor meeting right after!"</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="John David">
+                            <div>
+                                <h4>John David</h4>
+                                <p>Founder, AgriTech Uganda</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"The networking events have connected me with amazing mentors and potential co-founders. Incredible community!"</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah Nakamya">
+                            <div>
+                                <h4>Sarah Nakamya</h4>
+                                <p>Founder, EcoClean Solutions</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"The legal workshop saved me thousands in potential legal fees. Essential knowledge every founder should have."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="David Omondi">
+                            <div>
+                                <h4>David Omondi</h4>
+                                <p>Founder, FinEase Pay</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <h4>Founders Monday</h4>
+                    <p>Empowering startup founders globally every Monday.</p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/foundersmondayglobal" target="_blank" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://x.com/NaddambaL70150" target="_blank" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://linkedin.com/company/founders-monday" target="_blank" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://youtube.com/@foundersmonday" target="_blank" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://facebook.com/foundersmonday" target="_blank" aria-label="Facebook">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4>Events</h4>
+                    <ul class="footer-links">
+                        <li><a href="#upcoming">Upcoming Events</a></li>
+                        <li><a href="#past">Past Events</a></li>
+                        <li><a href="#calendar">Event Calendar</a></li>
+                        <li><a href="#workshops">Workshops</a></li>
+                        <li><a href="#networking">Networking</a></li>
+                        <li><a href="#pitch">Pitch Events</a></li>
+                        <li><a href="host-event.html">Host an Event</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="resources.html">Resource Library</a></li>
+                        <li><a href="speakers.html">Speaker Profiles</a></li>
+                        <li><a href="partners.html">Event Partners</a></li>
+                        <li><a href="gallery.html">Event Gallery</a></li>
+                        <li><a href="faq.html">Event FAQs</a></li>
+                        <li><a href="contact.html">Contact Event Team</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Contact</h4>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:events@foundersmonday.com">events@foundersmonday.com</a></li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+256740754608">+256 740 754 608</a></li>
+                        <li><i class="fas fa-map-marker-alt"></i> Kampala, Uganda</li>
+                        <li><i class="fas fa-clock"></i> Mon-Fri: 9AM-5PM EAT</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>© <span id="currentYear">2025</span> Founders Monday Global Support. All rights reserved.</p>
+                <p>Events Platform v2.0</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Event Registration Modal -->
+    <div class="modal" id="eventModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalEventTitle">Event Title</h3>
+                <button class="modal-close" onclick="closeEventModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div id="modalEventContent">
+                    <!-- Event content will be loaded here -->
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-outline" onclick="closeEventModal()">Close</button>
+                <button class="btn-primary" id="modalRegisterBtn">Register Now</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/events.js"></script>
+    
+    <script>
+        // Initialize events functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set current year
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+            
+            // Initialize calendar
+            initializeCalendar();
+            
+            // Filter functionality
+            setupEventFilters();
+            
+            // Load more events
+            document.getElementById('loadMoreEvents').addEventListener('click', function() {
+                loadMoreEvents();
+            });
+            
+            // Event card click handlers
+            document.querySelectorAll('.event-actions .btn-primary').forEach(button => {
+                button.addEventListener('click', function(e) {
+                    if (this.getAttribute('href').includes('details')) {
+                        e.preventDefault();
+                        const eventCard = this.closest('.event-card');
+                        openEventModal(eventCard);
+                    }
+                });
+            });
+        });
+
+        // Calendar functionality
+        function initializeCalendar() {
+            const currentDate = new Date();
+            const currentMonth = document.getElementById('currentMonth');
+            const calendarBody = document.getElementById('calendarBody');
+            
+            // Set initial month
+            updateCalendar(currentDate);
+            
+            // Navigation buttons
+            document.getElementById('prevMonth').addEventListener('click', function() {
+                currentDate.setMonth(currentDate.getMonth() - 1);
+                updateCalendar(currentDate);
+            });
+            
+            document.getElementById('nextMonth').addEventListener('click', function() {
+                currentDate.setMonth(currentDate.getMonth() + 1);
+                updateCalendar(currentDate);
+            });
+        }
+
+        function updateCalendar(date) {
+            const monthNames = [
+                "January", "February", "March", "April", "May", "June",
+                "July", "August", "September", "October", "November", "December"
+            ];
+            
+            document.getElementById('currentMonth').textContent = 
+                `${monthNames[date.getMonth()]} ${date.getFullYear()}`;
+            
+            // Generate calendar grid
+            generateCalendarGrid(date);
+        }
+
+        function generateCalendarGrid(date) {
+            const calendarBody = document.getElementById('calendarBody');
+            calendarBody.innerHTML = '';
+            
+            const year = date.getFullYear();
+            const month = date.getMonth();
+            
+            // Get first day of month
+            const firstDay = new Date(year, month, 1);
+            const startingDay = firstDay.getDay();
+            
+            // Get days in month
+            const daysInMonth = new Date(year, month + 1, 0).getDate();
+            
+            // Get today's date for highlighting
+            const today = new Date();
+            const isCurrentMonth = today.getFullYear() === year && today.getMonth() === month;
+            
+            // Create calendar days
+            let dayCount = 1;
+            
+            for (let week = 0; week < 6; week++) {
+                for (let day = 0; day < 7; day++) {
+                    const dayElement = document.createElement('div');
+                    dayElement.className = 'calendar-day';
+                    
+                    if (week === 0 && day < startingDay) {
+                        // Empty cells before first day
+                        dayElement.classList.add('empty');
+                    } else if (dayCount > daysInMonth) {
+                        // Empty cells after last day
+                        dayElement.classList.add('empty');
+                    } else {
+                        dayElement.textContent = dayCount;
+                        
+                        // Highlight today
+                        if (isCurrentMonth && dayCount === today.getDate()) {
+                            dayElement.classList.add('today');
+                        }
+                        
+                        // Add event indicators (mock data - in real app, fetch from API)
+                        if (dayCount === 15 || dayCount === 22 || dayCount === 29) {
+                            dayElement.classList.add('has-event');
+                            dayElement.classList.add('workshop-event');
+                        }
+                        
+                        if (dayCount === 5) {
+                            dayElement.classList.add('has-event');
+                            dayElement.classList.add('pitch-event');
+                        }
+                        
+                        dayCount++;
+                    }
+                    
+                    calendarBody.appendChild(dayElement);
+                }
+            }
+        }
+
+        function setupEventFilters() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const eventCards = document.querySelectorAll('.event-card');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    const filter = this.getAttribute('data-filter');
+                    
+                    // Show/hide event cards based on filter
+                    eventCards.forEach(card => {
+                        const categories = card.getAttribute('data-category');
+                        
+                        if (filter === 'all' || categories.includes(filter)) {
+                            card.style.display = 'flex';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        }
+
+        function loadMoreEvents() {
+            // In a real application, this would fetch more events from an API
+            const button = document.getElementById('loadMoreEvents');
+            button.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Loading...';
+            button.disabled = true;
+            
+            setTimeout(() => {
+                // Simulate loading more events
+                alert('In a real application, this would load more events from the server.');
+                button.innerHTML = '<i class="fas fa-plus"></i> Load More Events';
+                button.disabled = false;
+            }, 1500);
+        }
+
+        function openEventModal(eventCard) {
+            const modal = document.getElementById('eventModal');
+            const title = eventCard.querySelector('.event-title').textContent;
+            const description = eventCard.querySelector('.event-description').textContent;
+            
+            document.getElementById('modalEventTitle').textContent = title;
+            
+            // In a real application, you would fetch detailed event info
+            document.getElementById('modalEventContent').innerHTML = `
+                <div class="modal-event-details">
+                    <p>${description}</p>
+                    <h4>Event Details</h4>
+                    <p>More detailed information about the event would appear here.</p>
+                    <p>This includes full agenda, speaker bios, requirements, and more.</p>
+                </div>
+            `;
+            
+            modal.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeEventModal() {
+            document.getElementById('eventModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const modal = document.getElementById('eventModal');
+            if (event.target === modal) {
+                closeEventModal();
+            }
+        }
+    </script>
+</body>
+</html>

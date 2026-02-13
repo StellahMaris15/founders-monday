@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Founders Monday Global</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Similar header as index.html -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+
+                </div>
+                
+                <!-- Navigation Menu -->
+                <nav class="nav">
+                    <a href="index.html"><i class="fas fa-home"></i> Home</a>
+                    <div class="nav-dropdown">
+                        <a href="#" class="nav-dropdown-toggle">
+                            <i class="fas fa-user"></i> Account <i class="fas fa-chevron-down"></i>
+                        </a>
+                        <div class="nav-dropdown-menu">
+                            <a href="login.html"><i class="fas fa-sign-in-alt"></i> Login</a>
+                            <a href="register.html"><i class="fas fa-user-plus"></i> Register</a>
+                            <a href="dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </header>
+
+       <!-- Get Featured Section -->
+        <section id="get-featured" class="section">
+            <div class="container">
+                <h3 class="section-title">Apply to Be the Founder of the Week</h3>
+                <p class="text-center" style="margin-bottom: 3rem;">
+                    Submit your startup for a chance to be featured every Monday and win UGX 100,000!
+                </p>
+                
+                <!-- Application Progress Bar -->
+                <div class="progress-bar">
+                    <div class="progress-step active">1. Personal Info</div>
+                    <div class="progress-step">2. Company Details</div>
+                    <div class="progress-step">3. Founder Story</div>
+                    <div class="progress-step">4. Monday Insight</div>
+                    <div class="progress-step">5. Media Upload</div>
+                </div>
+                
+                <div class="form-container">
+                    <form id="founderForm" method="POST" action="submit_form.php" enctype="multipart/form-data">
+                        <input type="hidden" name="csrf_token" value="<?php echo Config::generateCSRFToken(); ?>">
+                        
+                        <!-- Section 1: Personal Information -->
+                        <div class="form-section">
+                            <h5>Personal Information</h5>
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="full_name">Full Name</label>
+                                    <input type="text" id="full_name" name="full_name" required placeholder="Enter your full name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email Address</label>
+                                    <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Phone Number</label>
+                                    <input type="tel" id="phone" name="phone" placeholder="+256 700 000 000">
+                                </div>
+                                <div class="form-group">
+                                    <label for="country">Country & City</label>
+                                    <input type="text" id="country" name="country" required placeholder="Country, City">
+                                </div>
+                                <div class="form-group">
+                                    <label for="linkedin">LinkedIn Profile URL</label>
+                                    <input type="url" id="linkedin" name="linkedin" placeholder="https://linkedin.com/in/yourprofile">
+                                </div>
+                                <div class="form-group">
+                                    <label for="website">Personal Website</label>
+                                    <input type="url" id="website" name="website" placeholder="https://yourwebsite.com">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Section 2: Company Details -->
+                        <div class="form-section">
+                            <h5>Company Details</h5>
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="company_name">Startup / Company Name</label>
+                                    <input type="text" id="company_name" name="company_name" required placeholder="Your company name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="industry">Industry / Sector</label>
+                                    <input type="text" id="industry" name="industry" required placeholder="e.g., Fintech, Healthtech, Edtech">
+                                </div>
+                                <div class="form-group">
+                                    <label for="company_website">Company Website</label>
+                                    <input type="url" id="company_website" name="company_website" placeholder="https://company.com">
+                                </div>
+                                <div class="form-group">
+                                    <label for="year_founded">Year Founded</label>
+                                    <input type="number" id="year_founded" name="year_founded" min="1900" max="2026" placeholder="2023">
+                                </div>
+                                <div class="form-group">
+                                    <label for="stage">Current Stage</label>
+                                    <select id="stage" name="stage" required>
+                                        <option value="">Select Stage</option>
+                                        <option value="idea">Idea</option>
+                                        <option value="mvp">MVP</option>
+                                        <option value="early-stage">Early-stage</option>
+                                        <option value="growth">Growth</option>
+                                        <option value="scaling">Scaling</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="team_size">Team Size</label>
+                                    <input type="number" id="team_size" name="team_size" min="1" placeholder="e.g., 5">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Section 3: Founder Story -->
+                        <div class="form-section">
+                            <h5><i class="fas fa-book-open"></i> Founder Story & Journey</h5>
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="bio">Brief Founder Bio</label>
+                                    <textarea id="bio" name="bio" rows="3" required placeholder="Tell us about yourself..."></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="description">Startup Description</label>
+                                    <textarea id="description" name="description" rows="3" required placeholder="What does your startup do?"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="challenge">Biggest Challenge Faced</label>
+                                    <textarea id="challenge" name="challenge" rows="3" required placeholder="What was your biggest challenge?"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="achievement">Key Achievement</label>
+                                    <textarea id="achievement" name="achievement" rows="3" required placeholder="What are you most proud of?"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lesson">Lesson You Wish You Knew Earlier</label>
+                                    <textarea id="lesson" name="lesson" rows="3" required placeholder="What lesson would you share?"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Section 4: Monday Insight -->
+                        <div class="form-section">
+                            <h5>Monday Insight</h5>
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="insight">Monday Insight (Key wisdom to share)</label>
+                                    <textarea id="insight" name="insight" rows="3" required placeholder="What key insight would you share with other founders?"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="advice">Advice for Early-Stage Founders</label>
+                                    <textarea id="advice" name="advice" rows="3" required placeholder="Your advice for fellow founders..."></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Section 5: Media -->
+                        <div class="form-section">
+                            <h5><i class="fas fa-images"></i> Media & Features</h5>
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="photo">Founder Photo Upload</label>
+                                    <input type="file" id="photo" name="photo" accept="image/*">
+                                    <small class="form-text">Max 10MB, JPG/PNG format</small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="logo">Company Logo Upload</label>
+                                    <input type="file" id="logo" name="logo" accept="image/*">
+                                    <small class="form-text">Max 10MB, JPG/PNG format</small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="interview">Video/Audio Interview Link</label>
+                                    <input type="url" id="interview" name="interview" placeholder="https://youtube.com/your-interview">
+                                </div>
+                                <div class="form-group">
+                                    <label for="social_media">Social Media Handles</label>
+                                    <input type="text" id="social_media" name="social_media" placeholder="@X, @linkedin, @instagram">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="text-center">
+                            <button type="submit" class="btn-primary" style="padding: 1rem 3rem; font-size: 1.1rem;">
+                                <i class="fas fa-paper-plane"></i> Submit Application
+                            </button>
+                            <p style="margin-top: 1rem; color: var(--gray); font-size: 0.9rem;">
+                                By submitting, you agree to our <a href="terms.html">Terms of Service</a> and <a href="privacy-policy.html">Privacy Policy</a>
+                            </p>
+                        </div>
+                    </form>
+                </div>
+                    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <h4>Founders Monday</h4>
+                    <p>Empowering startup founders globally every Monday through spotlight features, community building, and prize support.</p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/foundersmondayglobal" target="_blank" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://x.com/NaddambaL70150" target="_blank" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://linkedin.com/company/founders-monday" target="_blank" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://youtube.com/@foundersmonday" target="_blank" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://facebook.com/foundersmonday" target="_blank" aria-label="Facebook">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="#about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                        <li><a href="#resources"><i class="fas fa-book"></i> Resources</a></li>
+                        <li><a href="#spotlight"><i class="fas fa-star"></i> Founder Spotlight</a></li>
+                        <li><a href="#winners"><i class="fas fa-trophy"></i> Recent Winners</a></li>
+                        <li><a href="#events"><i class="fas fa-calendar-alt"></i> Events</a></li>
+                        <li><a href="#get-featured"><i class="fas fa-rocket"></i> Apply Now</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Account</h4>
+                    <ul class="footer-links">
+                        <li><a href="login.html"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+                        <li><a href="register.html"><i class="fas fa-user-plus"></i> Register</a></li>
+                        <li><a href="profile.html"><i class="fas fa-user-circle"></i> My Profile</a></li>
+                        <li><a href="dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                        <li><a href="forgot-password.html"><i class="fas fa-key"></i> Forgot Password</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="terms.html"><i class="fas fa-file-contract"></i> Terms of Service</a></li>
+                        <li><a href="privacy-policy.html"><i class="fas fa-shield-alt"></i> Privacy Policy</a></li>
+                        <li><a href="cookie-policy.html"><i class="fas fa-cookie"></i> Cookie Policy</a></li>
+                        <li><a href="code-of-conduct.html"><i class="fas fa-users"></i> Code of Conduct</a></li>
+                        <li><a href="disclaimer.html"><i class="fas fa-exclamation-triangle"></i> Disclaimer</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Contact Info</h4>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:hello@foundersmonday.com">hello@foundersmonday.com</a></li>
+                        <li><i class="fas fa-globe"></i> <a href="https://foundersmonday.com">www.foundersmonday.com</a></li>
+                        <li><i class="fab fa-whatsapp"></i> <a href="https://chat.whatsapp.com/Kliov7hj0QV6oG9JiuAorq" target="_blank">Join WhatsApp Group</a></li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+256740754608">+256 740 754 608</a></li>
+                        <li><i class="fas fa-map-marker-alt"></i> Kampala, Uganda</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-newsletter">
+                <h4>Stay Updated</h4>
+                <p>Subscribe to our newsletter for the latest updates</p>
+                <form class="footer-newsletter-form">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit" class="btn-accent">Subscribe</button>
+                </form>
+
+    <div class="validation-message" aria-live="polite"></div>
+    <p id="newsletter-hint" class="sr-only">
+        Enter your email to receive weekly updates and founder insights
+    </p>
+</form>
+            </div>
+            
+            <div class="copyright">
+                <p>© <span id="currentYear">2026</span> Founders Monday Global Support. All rights reserved. | Weekly Prize: UGX 100,000</p>
+                <p>Designed with <i class="fas fa-heart" style="color: #D4AF37;"></i> for the global founder community</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <!-- JavaScript Files -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/forms.js"></script>
+    <script src="animations.js"></script>
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    
+    <!-- Inline JavaScript for critical functionality -->
+    <script>
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const nav = document.querySelector('.nav');
+            nav.classList.toggle('mobile-open');
+        }
+
+        // Language change
+        function changeLanguage(lang) {
+            console.log('Changing language to:', lang);
+            alert('Language changed to ' + lang + '. In production, this would load the appropriate translations.');
+        }
+
+        // Back to top button
+        window.addEventListener('scroll', function() {
+            const backToTop = document.getElementById('backToTop');
+            if (window.scrollY > 300) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        // Initialize when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set current year in footer
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+            
+            // Animate stats
+            animateCounter('activeUsers', 500, '+');
+            animateCounter('totalWinners', 52);
+            animateCounter('countries', 15, '+');
+        });
+
+        // Simple counter animation
+        function animateCounter(elementId, target, suffix = '') {
+            const element = document.getElementById(elementId);
+            let current = 0;
+            const increment = target / 50;
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    current = target;
+                    clearInterval(timer);
+                }
+                element.textContent = Math.floor(current) + suffix;
+            }, 30);
+        }
+    </script>
+</body>
+</html>

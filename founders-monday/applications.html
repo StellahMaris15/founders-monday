@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Applications | Founders Monday Global</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📋</text></svg>">
+    
+    <meta name="description" content="Track and manage your applications for featured founder, events, and opportunities.">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+
+                </div>
+                
+                <nav class="nav">
+                    <a href="index.html"><i class="fas fa-home"></i> Home</a>
+                    <a href="index.html#community"><i class="fas fa-users"></i> Community</a>
+                    <a href="events.html"><i class="fas fa-calendar-alt"></i> Events</a>
+                    <a href="get-featured.html"><i class="fas fa-rocket"></i> Apply Now</a>
+                    
+                    <!-- Profile Dropdown -->
+                    <div class="nav-dropdown">
+                        <a href="#" class="nav-dropdown-toggle profile-toggle">
+                            <i class="fas fa-chevron-down"></i>
+                        </a>
+                        <div class="nav-dropdown-menu">
+                            <a href="portifolio.html"><i class="fas fa-user"></i> My Profile</a>
+                            <a href="applications.html" class="active"><i class="fas fa-file-alt"></i> Applications</a>
+                            <a href="startups.html"><i class="fas fa-briefcase"></i> My Startups</a>
+                            <a href="settings.html"><i class="fas fa-cog"></i> Settings</a>
+                            <div class="dropdown-divider"></div>
+                            <a href="logout.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                        </div>
+                    </div>
+                </nav>
+                
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <div class="page-header-content">
+                    <h1>My Applications</h1>
+                    <p>Track and manage all your applications for featured founder, events, and opportunities</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Applications Content -->
+        <div class="applications-content">
+            <div class="container">
+                <!-- Applications Stats -->
+                <div class="applications-stats">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-number">12</span>
+                            <span class="stat-label">Total Applications</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-number">3</span>
+                            <span class="stat-label">Pending Review</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-number">8</span>
+                            <span class="stat-label">Approved</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-number">1</span>
+                            <span class="stat-label">Won</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Applications Filters -->
+                <div class="applications-filters">
+                    <button class="filter-btn active" data-filter="all">All Applications</button>
+                    <button class="filter-btn" data-filter="pending">Pending</button>
+                    <button class="filter-btn" data-filter="approved">Approved</button>
+                    <button class="filter-btn" data-filter="rejected">Rejected</button>
+                    <button class="filter-btn" data-filter="won">Won</button>
+                </div>
+
+                <!-- Applications List -->
+                <div class="applications-list">
+                    <!-- Application 1 -->
+                    <div class="application-card" data-status="pending">
+                        <div class="application-header">
+                            <div class="application-title">
+                                <h3>Weekly Featured Founder</h3>
+                                <span class="application-id">#APP-2024-0012</span>
+                            </div>
+                            <div class="application-status pending">
+                                <i class="fas fa-clock"></i> Pending Review
+                            </div>
+                        </div>
+                        
+                        <div class="application-body">
+                            <div class="application-details">
+                                <div class="detail-item">
+                                    <i class="fas fa-calendar"></i>
+                                    <span>Submitted: Dec 20, 2024</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-clock"></i>
+                                    <span>Estimated Review: 5-7 business days</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-briefcase"></i>
+                                    <span>Startup: AgriTech Uganda</span>
+                                </div>
+                            </div>
+                            
+                            <p class="application-description">
+                                Application for the Weekly Featured Founder spotlight. If selected, you'll be featured on our platform and win UGX 100,000.
+                            </p>
+                            
+                            <div class="application-actions">
+                                <button class="btn-outline" onclick="viewApplication('APP-2024-0012')">
+                                    <i class="fas fa-eye"></i> View Details
+                                </button>
+                                <button class="btn-outline" onclick="editApplication('APP-2024-0012')">
+                                    <i class="fas fa-edit"></i> Edit
+                                </button>
+                                <button class="btn-outline" onclick="withdrawApplication('APP-2024-0012')">
+                                    <i class="fas fa-times"></i> Withdraw
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Application 2 -->
+                    <div class="application-card" data-status="approved">
+                        <div class="application-header">
+                            <div class="application-title">
+                                <h3>Pitch Competition 2025</h3>
+                                <span class="application-id">#APP-2024-0011</span>
+                            </div>
+                            <div class="application-status approved">
+                                <i class="fas fa-check-circle"></i> Approved
+                            </div>
+                        </div>
+                        
+                        <div class="application-body">
+                            <div class="application-details">
+                                <div class="detail-item">
+                                    <i class="fas fa-calendar"></i>
+                                    <span>Submitted: Dec 15, 2024</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-calendar-check"></i>
+                                    <span>Approved: Dec 18, 2024</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-briefcase"></i>
+                                    <span>Startup: AgriTech Uganda</span>
+                                </div>
+                            </div>
+                            
+                            <p class="application-description">
+                                Your startup has been approved for the Pitch Competition 2025. Event details will be sent to your email.
+                            </p>
+                            
+                            <div class="application-actions">
+                                <button class="btn-primary" onclick="viewEventDetails()">
+                                    <i class="fas fa-calendar-alt"></i> View Event Details
+                                </button>
+                                <button class="btn-outline" onclick="downloadCertificate()">
+                                    <i class="fas fa-download"></i> Download Approval
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Application 3 -->
+                    <div class="application-card" data-status="won">
+                        <div class="application-header">
+                            <div class="application-title">
+                                <h3>Monthly Founder Spotlight - November</h3>
+                                <span class="application-id">#APP-2024-0010</span>
+                            </div>
+                            <div class="application-status won">
+                                <i class="fas fa-trophy"></i> Winner
+                            </div>
+                        </div>
+                        
+                        <div class="application-body">
+                            <div class="application-details">
+                                <div class="detail-item">
+                                    <i class="fas fa-calendar"></i>
+                                    <span>Submitted: Nov 10, 2024</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-trophy"></i>
+                                    <span>Won: Nov 15, 2024</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-gift"></i>
+                                    <span>Prize: UGX 100,000 Awarded</span>
+                                </div>
+                            </div>
+                            
+                            <p class="application-description">
+                                Congratulations! You were selected as the November Featured Founder. Your startup was highlighted across our platforms.
+                            </p>
+                            
+                            <div class="application-actions">
+                                <button class="btn-primary" onclick="viewFeaturePage()">
+                                    <i class="fas fa-star"></i> View Feature Page
+                                </button>
+                                <button class="btn-outline" onclick="shareAchievement()">
+                                    <i class="fas fa-share-alt"></i> Share Achievement
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Application 4 -->
+                    <div class="application-card" data-status="rejected">
+                        <div class="application-header">
+                            <div class="application-title">
+                                <h3>Startup Grant Application</h3>
+                                <span class="application-id">#APP-2024-0009</span>
+                            </div>
+                            <div class="application-status rejected">
+                                <i class="fas fa-times-circle"></i> Not Selected
+                            </div>
+                        </div>
+                        
+                        <div class="application-body">
+                            <div class="application-details">
+                                <div class="detail-item">
+                                    <i class="fas fa-calendar"></i>
+                                    <span>Submitted: Oct 25, 2024</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-times-circle"></i>
+                                    <span>Status: Not Selected</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-briefcase"></i>
+                                    <span>Startup: AgriTech Uganda</span>
+                                </div>
+                            </div>
+                            
+                            <p class="application-description">
+                                Your application was reviewed but not selected for this round. You may reapply in the next cycle.
+                            </p>
+                            
+                            <div class="feedback-section">
+                                <h4><i class="fas fa-comment"></i> Feedback:</h4>
+                                <p>"Great application! We encourage you to strengthen your financial projections and reapply next quarter."</p>
+                            </div>
+                            
+                            <div class="application-actions">
+                                <button class="btn-outline" onclick="viewFeedback()">
+                                    <i class="fas fa-eye"></i> View Full Feedback
+                                </button>
+                                <button class="btn-primary" onclick="reapply()">
+                                    <i class="fas fa-redo"></i> Reapply Next Cycle
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- New Application CTA -->
+                <div class="new-application-cta">
+                    <div class="cta-content">
+                        <h3>Ready to Apply for New Opportunities?</h3>
+                        <p>Submit applications for featured founder, events, grants, and more.</p>
+                        <div class="cta-buttons">
+                            <a href="index.html#get-featured" class="btn-primary">
+                                <i class="fas fa-rocket"></i> Apply for Featured Founder
+                            </a>
+                            <a href="events.html" class="btn-outline">
+                                <i class="fas fa-calendar-alt"></i> Browse Events
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <h4>Founders Monday</h4>
+                    <p>Empowering startup founders globally every Monday.</p>
+                </div>
+                <div>
+                    <h4>Account</h4>
+                    <ul class="footer-links">
+                        <li><a href="profile.html">My Profile</a></li>
+                        <li><a href="my-applications.html" class="active">Applications</a></li>
+                        <li><a href="my-startups.html">My Startups</a></li>
+                        <li><a href="settings.html">Settings</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2025 Founders Monday Global Support. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Filter functionality
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                // Update active filter
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                
+                const filter = this.getAttribute('data-filter');
+                const applications = document.querySelectorAll('.application-card');
+                
+                applications.forEach(app => {
+                    const status = app.getAttribute('data-status');
+                    
+                    if (filter === 'all' || filter === status) {
+                        app.style.display = 'block';
+                    } else {
+                        app.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Action functions
+        function viewApplication(id) {
+            alert(`Viewing application ${id}`);
+        }
+
+        function editApplication(id) {
+            alert(`Editing application ${id}`);
+        }
+
+        function withdrawApplication(id) {
+            if (confirm('Are you sure you want to withdraw this application?')) {
+                alert(`Application ${id} withdrawn`);
+            }
+        }
+
+        function viewEventDetails() {
+            alert('Opening event details');
+        }
+
+        function downloadCertificate() {
+            alert('Downloading approval certificate');
+        }
+
+        function viewFeaturePage() {
+            alert('Opening feature page');
+        }
+
+        function shareAchievement() {
+            alert('Sharing achievement');
+        }
+
+        function viewFeedback() {
+            alert('Viewing full feedback');
+        }
+
+        function reapply() {
+            alert('Redirecting to reapplication form');
+        }
+    </script>
+</body>
+</html>

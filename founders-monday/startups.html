@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Startups | Founders Monday Global</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
+    
+    <meta name="description" content="Manage your startups, track progress, and update information.">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+
+                </div>
+                
+                <nav class="nav">
+                    <a href="index.html"><i class="fas fa-home"></i> Home</a>
+                    <a href="index.html#community"><i class="fas fa-users"></i> Community</a>
+                    <a href="events.html"><i class="fas fa-calendar-alt"></i> Events</a>
+                    <a href="get-featured.html"><i class="fas fa-rocket"></i> Apply Now</a>
+                    
+                    <!-- Profile Dropdown -->
+                    <div class="nav-dropdown">
+                        <a href="#" class="nav-dropdown-toggle profile-toggle">
+                            <i class="fas fa-chevron-down"></i>
+                        </a>
+                        <div class="nav-dropdown-menu">
+                            <a href="portifolio.html"><i class="fas fa-user"></i> My Profile</a>
+                            <a href="applications.html"><i class="fas fa-file-alt"></i> Applications</a>
+                            <a href="startups.html" class="active"><i class="fas fa-briefcase"></i> My Startups</a>
+                            <a href="settings.html"><i class="fas fa-cog"></i> Settings</a>
+                            <div class="dropdown-divider"></div>
+                            <a href="logout.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                        </div>
+                    </div>
+                </nav>
+                
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <div class="page-header-content">
+                    <h1>My Startups</h1>
+                    <p>Manage your startup portfolio, track progress, and showcase your ventures</p>
+                    <button class="btn-primary" onclick="addStartup()">
+                        <i class="fas fa-plus"></i> Add New Startup
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Startups Content -->
+        <div class="startups-content">
+            <div class="container">
+                <!-- Startup Stats -->
+                <div class="startup-stats">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-number">3</span>
+                            <span class="stat-label">Total Startups</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-number">1</span>
+                            <span class="stat-label">Featured</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-number">28</span>
+                            <span class="stat-label">Total Team</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-dollar-sign"></i>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-number">$75K</span>
+                            <span class="stat-label">Total Funding</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Startups List -->
+                <div class="startups-list">
+                    <!-- Startup 1 - Featured -->
+                    <div class="startup-card featured">
+                        <div class="featured-badge">
+                            <i class="fas fa-star"></i> Featured
+                        </div>
+                        
+                        <div class="startup-header">
+                            <div class="startup-logo">
+                                <img src="https://via.placeholder.com/80" alt="AgriTech Uganda">
+                            </div>
+                            <div class="startup-info">
+                                <h3>AgriTech Uganda</h3>
+                                <p class="startup-tagline">Connecting smallholder farmers with markets using mobile technology</p>
+                                <div class="startup-meta">
+                                    <span><i class="fas fa-map-marker-alt"></i> Kampala, Uganda</span>
+                                    <span><i class="fas fa-calendar-alt"></i> Founded: 2023</span>
+                                    <span><i class="fas fa-users"></i> Team: 15</span>
+                                    <span><i class="fas fa-chart-line"></i> Stage: Growth</span>
+                                </div>
+                            </div>
+                            <div class="startup-actions">
+                                <button class="btn-primary" onclick="manageStartup('agritech')">
+                                    <i class="fas fa-cog"></i> Manage
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="startup-body">
+                            <div class="startup-description">
+                                <p>AgriTech Uganda is revolutionizing agriculture in East Africa by connecting smallholder farmers with markets, providing access to financing, and offering data-driven insights for better crop yields.</p>
+                            </div>
+                            
+                            <div class="startup-stats">
+                                <div class="stat-item">
+                                    <span class="stat-label">Farmers Reached</span>
+                                    <span class="stat-value">1,200+</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-label">Revenue Increase</span>
+                                    <span class="stat-value">40%</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-label">Funding Raised</span>
+                                    <span class="stat-value">$50,000</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-label">Customer Rating</span>
+                                    <span class="stat-value">4.8/5</span>
+                                </div>
+                            </div>
+                            
+                            <div class="startup-tags">
+                                <span class="tag agriculture">Agriculture</span>
+                                <span class="tag fintech">Fintech</span>
+                                <span class="tag mobile">Mobile</span>
+                                <span class="tag impact">Social Impact</span>
+                            </div>
+
+                        </div>
+                        
+                        <div class="startup-footer">
+                            <div class="applications-count">
+                                <i class="fas fa-file-alt"></i> 3 Active Applications
+                            </div>
+                            <div class="last-updated">
+                                <i class="fas fa-history"></i> Updated: Dec 20, 2024
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Startup 2 -->
+                    <div class="startup-card">
+                        <div class="startup-header">
+                            <div class="startup-logo">
+                                <img src="https://via.placeholder.com/80" alt="EcoClean">
+                            </div>
+                            <div class="startup-info">
+                                <h3>EcoClean Solutions</h3>
+                                <p class="startup-tagline">Sustainable cleaning products for urban households</p>
+                                <div class="startup-meta">
+                                    <span><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</span>
+                                    <span><i class="fas fa-calendar-alt"></i> Founded: 2022</span>
+                                    <span><i class="fas fa-users"></i> Team: 8</span>
+                                    <span><i class="fas fa-chart-line"></i> Stage: Early</span>
+                                </div>
+                            </div>
+                            <div class="startup-actions">
+                                <button class="btn-primary" onclick="manageStartup('ecoclean')">
+                                    <i class="fas fa-cog"></i> Manage
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="startup-body">
+                            <div class="startup-description">
+                                <p>EcoClean Solutions produces environmentally friendly cleaning products made from locally sourced, natural ingredients. Our mission is to reduce plastic waste and chemical pollution.</p>
+                            </div>
+                            
+                            <div class="startup-stats">
+                                <div class="stat-item">
+                                    <span class="stat-label">Products Sold</span>
+                                    <span class="stat-value">5,000+</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-label">Retail Partners</span>
+                                    <span class="stat-value">15</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-label">Funding Raised</span>
+                                    <span class="stat-value">$20,000</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-label">Plastic Saved</span>
+                                    <span class="stat-value">2,500kg</span>
+                                </div>
+                            </div>
+                            
+                            <div class="startup-tags">
+                                <span class="tag sustainability">Sustainability</span>
+                                <span class="tag ecommerce">E-commerce</span>
+                                <span class="tag manufacturing">Manufacturing</span>
+                                <span class="tag b2c">B2C</span>
+                            </div>
+                        </div>
+                        
+                        <div class="startup-footer">
+                            <div class="applications-count">
+                                <i class="fas fa-file-alt"></i> 1 Active Application
+                            </div>
+                            <div class="last-updated">
+                                <i class="fas fa-history"></i> Updated: Nov 15, 2024
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Startup 3 -->
+                    <div class="startup-card">
+                        <div class="startup-header">
+                            <div class="startup-logo">
+                                <img src="https://via.placeholder.com/80" alt="TechAcademy">
+                            </div>
+                            <div class="startup-info">
+                                <h3>TechAcademy Africa</h3>
+                                <p class="startup-tagline">Online coding bootcamp for African youth</p>
+                                <div class="startup-meta">
+                                    <span><i class="fas fa-map-marker-alt"></i> Lagos, Nigeria</span>
+                                    <span><i class="fas fa-calendar-alt"></i> Founded: 2024</span>
+                                    <span><i class="fas fa-users"></i> Team: 5</span>
+                                    <span><i class="fas fa-chart-line"></i> Stage: MVP</span>
+                                </div>
+                            </div>
+                            <div class="startup-actions">
+                                <button class="btn-primary" onclick="manageStartup('techacademy')">
+                                    <i class="fas fa-cog"></i> Manage
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="startup-body">
+                            <div class="startup-description">
+                                <p>TechAcademy Africa provides affordable, high-quality coding education to young Africans. We offer web development, data science, and mobile app development courses with job placement support.</p>
+                            </div>
+                            
+                            <div class="startup-stats">
+                                <div class="stat-item">
+                                    <span class="stat-label">Students Enrolled</span>
+                                    <span class="stat-value">150+</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-label">Completion Rate</span>
+                                    <span class="stat-value">85%</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-label">Funding Raised</span>
+                                    <span class="stat-value">$5,000</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-label">Job Placements</span>
+                                    <span class="stat-value">45%</span>
+                                </div>
+                            </div>
+                            
+                            <div class="startup-tags">
+                                <span class="tag edtech">EdTech</span>
+                                <span class="tag online">Online Learning</span>
+                                <span class="tag skills">Skills Training</span>
+                                <span class="tag impact">Social Impact</span>
+                            </div>
+                        </div>
+                        
+                        <div class="startup-footer">
+                            <div class="applications-count">
+                                <i class="fas fa-file-alt"></i> No Active Applications
+                            </div>
+                            <div class="last-updated">
+                                <i class="fas fa-history"></i> Updated: Oct 30, 2024
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Startup Management CTA -->
+                <div class="management-cta">
+                    <div class="cta-content">
+                        <div class="cta-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <div class="cta-text">
+                            <h3>Need Help Managing Your Startups?</h3>
+                            <p>Access resources, templates, and guidance to help your startups succeed.</p>
+                        </div>
+                        <div class="cta-actions">
+                            <a href="contact.html" class="btn-outline">
+                                <i class="fas fa-headset"></i> Get Support
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <h4>Founders Monday</h4>
+                    <p>Empowering startup founders globally every Monday.</p>
+                </div>
+                <div>
+                    <h4>Account</h4>
+                    <ul class="footer-links">
+                        <li><a href="profile.html">My Profile</a></li>
+                        <li><a href="my-applications.html">Applications</a></li>
+                        <li><a href="my-startups.html" class="active">My Startups</a></li>
+                        <li><a href="settings.html">Settings</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2025 Founders Monday Global Support. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Startup Modal -->
+    <div id="startupModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Add New Startup</h3>
+                <button class="modal-close" onclick="closeModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="startupForm">
+                    <div class="form-group">
+                        <label>Startup Name</label>
+                        <input type="text" placeholder="Enter startup name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Tagline</label>
+                        <input type="text" placeholder="Brief description (max 100 characters)">
+                    </div>
+                    <div class="form-group">
+                        <label>Industry/Sector</label>
+                        <select required>
+                            <option value="">Select industry</option>
+                            <option value="tech">Technology</option>
+                            <option value="health">Healthcare</option>
+                            <option value="finance">Fintech</option>
+                            <option value="education">EdTech</option>
+                            <option value="agriculture">Agriculture</option>
+                            <option value="sustainability">Sustainability</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Website URL</label>
+                        <input type="url" placeholder="https://yourstartup.com">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-outline" onclick="closeModal()">Cancel</button>
+                <button class="btn-primary" onclick="submitStartup()">Add Startup</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function addStartup() {
+            document.getElementById('startupModal').style.display = 'block';
+        }
+
+        function closeModal() {
+            document.getElementById('startupModal').style.display = 'none';
+        }
+
+        function submitStartup() {
+            alert('Startup added successfully!');
+            closeModal();
+        }
+
+        function manageStartup(startupId) {
+            alert(`Managing ${startupId}`);
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const modal = document.getElementById('startupModal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        }
+    </script>
+</body>
+</html>

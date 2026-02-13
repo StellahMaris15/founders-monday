@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Founders Monday Global | Empowering Startup Founders</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
+    
+    <!-- Preconnect to external resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Meta tags for SEO -->
+    <meta name="description" content="Founders Monday Global - Empowering startup founders every Monday. Join our community, get featured, and win UGX 100,000 weekly prize.">
+    <meta name="keywords" content="founders, startups, entrepreneurship, community, funding, networking, Africa startups">
+    <meta name="author" content="Founders Monday Global">
+    <meta property="og:title" content="Founders Monday Global | Empowering Startup Founders">
+    <meta property="og:description" content="Join our global community of entrepreneurs. Get featured, win prizes, and connect with fellow founders building the future.">
+    <meta property="og:image" content="https://foundersmonday.com/assets/images/og-image.jpg">
+    <meta property="og:url" content="https://foundersmonday.com">
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Founders Monday Global",
+        "url": "https://foundersmonday.com",
+        "logo": "https://foundersmonday.com/assets/images/logo.png",
+        "description": "A global community empowering startup founders every Monday",
+        "email": "hello@foundersmonday.com",
+        "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "Uganda"
+        },
+        "sameAs": [
+            "https://www.instagram.com/foundersmondayglobal",
+            "https://x.com/NaddambaL70150",
+            "https://chat.whatsapp.com/Kliov7hj0QV6oG9JiuAorq"
+        ]
+    }
+    </script>
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://foundersmonday.com">
+</head>
+<body>
+    <!-- Accessibility Menu -->
+    <div id="accessibilityMenu" class="accessibility-menu">
+        <button class="accessibility-btn" onclick="increaseFontSize()" title="Increase Text Size">
+            <i class="fas fa-text-height"></i> A+
+        </button>
+        <button class="accessibility-btn" onclick="decreaseFontSize()" title="Decrease Text Size">
+            <i class="fas fa-text-height"></i> A-
+        </button>
+        <button class="accessibility-btn" onclick="toggleHighContrast()" title="High Contrast Mode">
+            <i class="fas fa-adjust"></i> Contrast
+        </button>
+        <button class="accessibility-btn" onclick="speakCurrentPage()" title="Read Aloud">
+            <i class="fas fa-volume-up"></i> Read
+        </button>
+        <button class="accessibility-btn" onclick="toggleAccessibilityMenu()" title="Close Menu">
+            <i class="fas fa-times"></i> Close
+        </button>
+    </div>
+
+    <!-- Skip to Main Content -->
+    <a href="#main-content" class="skip-to-main">Skip to main content</a>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+ 
+                
+                <!-- Navigation Menu -->
+                <nav class="nav">
+                    <a href="#home" class="active"><i class="fas fa-home"></i> Home</a>
+                    <a href="#about"><i class="fas fa-info-circle"></i> About</a>
+                    <a href="#resources"><i class="fas fa-book"></i> Resources</a>
+                    <a href="#spotlight"><i class="fas fa-star"></i> Spotlight</a>
+                     <a href="#community"><i class="fas fa-users"></i> Community</a>
+                    <a href="#events"><i class="fas fa-calendar-alt"></i> Events</a>
+
+                    <!-- Account Dropdown -->
+                    <div class="nav-dropdown">
+                        <a href="#" class="nav-dropdown-toggle">
+                            <i class="fas fa-user"></i> Account <i class="fas fa-chevron-down"></i>
+                        </a>
+                        <div class="nav-dropdown-menu">
+                            <a href="login.html"><i class="fas fa-sign-in-alt"></i> Login</a>
+                            <a href="register.html"><i class="fas fa-user-plus"></i> Register</a>
+                            <a href="dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+                        </div>
+                    </div>
+
+                                        <div class="cta-buttons"></div>
+                    <a href="get-featured.html" class="btn-primary"><i class="fas fa-rocket"></i> Apply Now</a>
+                        </a>
+                    </div>
+                </nav>
+                
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="container hero-content">
+                <p class="weekly-winner"><i class="fas fa-bullhorn"></i> Weekly Prize Winner Announcement</p>
+                <h2>Empowering Startup Founders<br><span>Every Monday</span></h2>
+                <p class="hero-description">
+                    Join Founder's Monday a global community of entrepreneurs. Get featured, win prizes, and connect with fellow founders building the future.
+                </p>
+                <div class="prize-badge">
+                    <i class="fas fa-award"></i> Weekly Prize for Featured Founder: <strong>UGX 100K</strong>
+                </div>
+                <p class="prize-note"><i class="fas fa-check-circle"></i> Every week, one founder wins!</p>
+                
+                <!-- Live Stats Counter -->
+                <div class="live-stats">
+                    <div class="live-stat">
+                        <span class="live-number" id="activeUsers">100+</span>
+                        <span class="live-label">Founders Online</span>
+                    </div>
+                    <div class="live-stat">
+                        <span class="live-number" id="totalWinners">10</span>
+                        <span class="live-label">Winners This Year</span>
+                    </div>
+                    <div class="live-stat">
+                        <span class="live-number" id="countries">15+</span>
+                        <span class="live-label">Countries</span>
+                    </div>
+                </div>
+                
+                <div class="hero-buttons">
+                    <a href="https://chat.whatsapp.com/Kliov7hj0QV6oG9JiuAorq" target="_blank" class="btn-primary">
+                        <i class="fab fa-whatsapp"></i> Join WhatsApp Group
+                    </a>
+                    <a href="get-featured.html" class="btn-outline">
+                        <i class="fas fa-paper-plane"></i> Submit Your Startup
+                    </a>
+                    <a href="register.html" class="btn-accent">
+                        <i class="fas fa-user-plus"></i> Create Account
+                    </a>
+                </div>
+                
+                <!-- Trust Badges -->
+                <div class="trust-badges">
+                    <span class="trust-badge"><i class="fas fa-shield-alt"></i> Secure Platform</span>
+                    <span class="trust-badge"><i class="fas fa-users"></i> 5000+ Members</span>
+                    <span class="trust-badge"><i class="fas fa-globe"></i> Global Community</span>
+                    <span class="trust-badge"><i class="fas fa-award"></i> Verified</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Statistics -->
+        <section class="stats-section accent-bg">
+            <div class="container">
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">Founders</span>
+                    </div>
+
+                    <div class="stat-item">
+                        <span class="stat-number">15+</span>
+                        <span class="stat-label">Countries</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">UGX 100,000</span>
+                        <span class="stat-label">Weekly Prize</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label">Support</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section light-bg">
+            <div class="container">
+                <h3 style="text-align: center;" class="section-title">About Us</h3>
+                <h4 style="text-align: center;">Building a Global Founder Community</h4>
+                <p class="text-center" style="max-width: 800px; margin: 0 auto 3rem;">
+                    Founder's Monday Global Support is a community-driven initiative aimed at showcasing startup founders every Monday while building an interactive ecosystem for learning, collaboration, and growth.
+                </p>
+                
+                <div class="grid">
+                    <div class="card">
+                        <div class="card-icon">🚀</div>
+                        <h4>Weekly Spotlight</h4>
+                        <p>Every Monday, we feature a startup founder and their journey, giving them the visibility they deserve.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">📚</div>
+                        <h4>Learn & Grow</h4>
+                        <p>Access resources, insights, and lessons from founders who've walked the path before you.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">🌐</div>
+                        <h4>Network Globally</h4>
+                        <p>Connect with entrepreneurs, investors, and mentors from across the world.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">🏆</div>
+                        <h4>Win Prizes</h4>
+                        <p>Featured founders win UGX 100,000 weekly to support their startup journey.</p>
+                    </div>
+                </div>
+                
+                <div class="text-center" style="margin-top: 3rem;">
+                    <h4>Our Mission</h4>
+                    <p style="max-width: 800px; margin: 0 auto; font-size: 1.1rem;">
+                        To spotlight startup founders globally, provide hands-on experience for aspiring entrepreneurs, and create a supportive ecosystem where innovation thrives every Monday.
+                    </p>
+                </div>
+                
+                <!-- Team Section -->
+                <div class="team-section" style="margin-top: 4rem;">
+                    <h4 class="text-center">Meet Our Team</h4>
+                    <div class="team-grid">
+                        <div class="team-member">
+                            <img src="" alt="Team Member">
+                            <h5>Oddongo Joshue</h5>
+                            <p class="team-role">Lead Developer & Design Lead</p>
+                            <p class="team-bio">Build and maintain the website; Ensure website UI/UX is user-friendly; Design graphics for website and social media.</p>
+                            <a href="https://linkedin.com/in/johndoe" target="_blank" class="team-social">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                        </div>
+                        <div class="team-member">
+                            <img src="" alt="Team Member">
+                            <h5>Nabukeya Stella Maris</h5>
+                            <p class="team-role">Software Developer </p>
+                            <p class="team-bio">Assist in website development; Support integrations with social media & forms; Test website functionalities. </p>
+                            <a href="https://linkedin.com/in/johndoe" target="_blank" class="team-social">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                        </div>
+                        <div class="team-member">
+                            <img src="" alt="Team Member">
+                            <h5>Katumba Julius</h5>
+                            <p class="team-role">Software Developer </p>
+                            <p class="team-bio">Collaborate with Stella Maris; Assist in backend and frontend website tasks; Debug coding issues; Ensure platform runs smoothly. </p>
+                            <a href="https://www.linkedin.com/in/katumba-julius-a13b33399?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B9ctdze4JTjqsbKL15sfVQw%3D%3D" target="_blank" class="team-social">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                        </div>
+                        <div class="team-member">
+                            <img src="" alt="Team Member">
+                            <h5>Naddamba Lamulah</h5>
+                            <p class="team-role">Social Media & Community Manager</p>
+                            <p class="team-bio">Manage all social media channels, Post weekly updates; Collect founder stories and submissions.</p>
+                            <a href="https://linkedin.com/in/mikejohnson" target="_blank" class="team-social">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resources Section -->
+        <section id="resources" class="section">
+            <div class="container">
+                <h3 class="section-title">Founder Resources</h3>
+                <div class="resources-grid">
+                    <div class="resource-card">
+                        <div class="resource-icon">
+                            <i class="fas fa-file-pdf"></i>
+                        </div>
+                        <h4>Templates & Toolkits</h4>
+                        <ul class="resource-list">
+                            <li><a href="resources/pitch-deck-template.pdf" download><i class="fas fa-download"></i> Pitch Deck Template</a></li>
+                            <li><a href="resources/business-plan-template.pdf" download><i class="fas fa-download"></i> Business Plan Template</a></li>
+                            <li><a href="resources/investor-agreement.pdf" download><i class="fas fa-download"></i> Investor Agreement</a></li>
+                            <li><a href="resources/financial-projections.xlsx" download><i class="fas fa-download"></i> Financial Projections</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="resource-card">
+                        <div class="resource-icon">
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <h4>Video Library</h4>
+                        <ul class="resource-list">
+                            <li><a href="https://youtube.com/playlist?list=PLx0sYbCqOb8TBPRdmBHs5Iftvv9TPboYG" target="_blank"><i class="fas fa-play-circle"></i> Funding Strategies</a></li>
+                            <li><a href="https://youtube.com/playlist?list=PLx0sYbCqOb8QxKlZ9FZBfNQnU3Z4kHX7v" target="_blank"><i class="fas fa-play-circle"></i> Marketing Masterclass</a></li>
+                            <li><a href="https://youtube.com/playlist?list=PLx0sYbCqOb8Q2H9q3vLQJzBvKZ8tQl7jY" target="_blank"><i class="fas fa-play-circle"></i> Product Development</a></li>
+                            <li><a href="https://youtube.com/playlist?list=PLx0sYbCqOb8R9vLQJzBvKZ8tQl7jY" target="_blank"><i class="fas fa-play-circle"></i> Team Building</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="resource-card">
+                        <div class="resource-icon">
+                            <i class="fas fa-book-open"></i>
+                        </div>
+                        <h4>Learning Center</h4>
+                        <ul class="resource-list">
+                            <li><a href="courses/startup-foundations"><i class="fas fa-graduation-cap"></i> Startup Course</a></li>
+                            <li><a href="courses/legal-basics"><i class="fas fa-graduation-cap"></i> Legal Basics</a></li>
+                            <li><a href="courses/sales-training"><i class="fas fa-graduation-cap"></i> Sales Training</a></li>
+                            <li><a href="courses/leadership-skills"><i class="fas fa-graduation-cap"></i> Leadership Skills</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Newsletter Signup -->
+                <div class="newsletter-section" style="margin-top: 4rem;">
+                    <div class="newsletter-box">
+                        <h4>Stay Updated</h4>
+                        <p>Subscribe to our weekly newsletter for founder tips, resources, and community updates.</p>
+                        <form class="newsletter-form" id="newsletterForm">
+                            <input type="email" placeholder="Enter your email" required>
+                            <button type="submit" class="btn-primary">
+                                <i class="fas fa-paper-plane"></i> Subscribe
+                            </button>
+                        </form>
+                        <p class="privacy-note">We respect your privacy. <a href="privacy-policy.html">Privacy Policy</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Founders -->
+        <section id="spotlight" class="section accent-bg">
+            <div class="container">
+                <h3 class="section-title">Weekly Founder Spotlight</h3>
+                <p class="text-center" style="margin-bottom: 3rem;">
+                    Every Monday, we celebrate a founder's journey and award them UGX 100,000 to support their startup.
+                </p>
+                
+                <div class="founder-card">
+                    <img src="" alt="Featured Founder">
+                    <h4>John David</h4>
+                    <span>AgriTech Uganda · Agriculture · Uganda</span>
+                    <p>
+                        John founded AgriTech Uganda to connect smallholder farmers with markets using mobile technology. His platform has helped over 1,000 farmers increase their income by 40% through better market access and pricing.
+                    </p>
+                    
+                    <!-- Media Gallery -->
+                    <div class="media-gallery">
+                        <a href="https://youtube.com/watch?v=example" target="_blank" class="media-item">
+                            <i class="fas fa-play-circle"></i> Watch Interview
+                        </a>
+                        <a href="gallery/sarah-nakamya" class="media-item">
+                            <i class="fas fa-image"></i> Photo Gallery
+                        </a>
+                        <a href="case-studies/agritech-uganda" class="media-item">
+                            <i class="fas fa-file-alt"></i> Case Study
+                        </a>
+                    </div>
+                    
+                    <a href="founders/John-David.html" class="link-primary">Read Full Interview <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="text-center" style="margin-top: 3rem; padding: 2rem; background: var(--light-blue); border-radius: 1rem;">
+                    <h4>Could Be You!</h4>
+                    <p>Submit your startup and get a chance to be featured this Monday</p>
+                    <div class="prize-badge" style="margin: 1rem auto;">UGX 100,000</div>
+                    <a href="get-featured.html" class="btn-primary" style="margin-top: 1rem;">
+                        <i class="fas fa-rocket"></i> Apply Now
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recent Winners -->
+        <section id="winners" class="section">
+            <div class="container">
+                <h3 class="section-title">Recent Winners</h3>
+                <div class="winners-grid">
+                    <div class="winner-card">
+                        <div class="winner-date">Dec 16, 2025</div>
+                        <div class="winner-name">Sarah Nakamya</div>
+                        <div class="winner-company">AgriTech Uganda · Agriculture</div>
+                        <div class="winner-prize">UGX 100,000</div>
+                        <a href="founders/John-David.html" class="winner-link">View Profile →</a>
+                    </div>
+                    <div class="winner-card">
+                        <div class="winner-date">Dec 9, 2026</div>
+                        <div class="winner-name">David Omondi</div>
+                        <div class="winner-company">FinEase Pay · Fintech</div>
+                        <div class="winner-prize">UGX 100,000</div>
+                        <a href="founders/david-omondi.html" class="winner-link">View Profile →</a>
+                    </div>
+                    <div class="winner-card">
+                        <div class="winner-date">Dec 2, 2025</div>
+                        <div class="winner-name">Grace Achieng</div>
+                        <div class="winner-company">HealthHub Africa · Healthcare</div>
+                        <div class="winner-prize">UGX 100,000</div>
+                        <a href="founders/grace-achieng.html" class="winner-link">View Profile →</a>
+                    </div>
+                </div>
+
+        </section>
+
+        <!-- Community Section -->
+        <section id="community" class="section accent-bg">
+            <div class="container">
+                <h3 class="section-title">Join Our Community</h3>
+                <p class="text-center" style="margin-bottom: 3rem;">
+                    Connect with founders, investors, and mentors from around the world.
+                </p>
+                
+                <div class="community-platforms">
+                    <div class="platform-card">
+                        <div class="platform-icon whatsapp">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <h4>WhatsApp Group</h4>
+                        <p>Real-time discussions and networking with founders</p>
+                        <a href="https://chat.whatsapp.com/Kliov7hj0QV6oG9JiuAorq" target="_blank" class="btn-whatsapp">
+                            <i class="fab fa-whatsapp"></i> Join Now
+                        </a>
+                    </div>
+                    
+                    
+                    <div class="platform-card">
+                        <div class="platform-icon telegram">
+                            <i class="fab fa-telegram"></i>
+                        </div>
+                        <h4>Telegram Channel</h4>
+                        <p>Announcements, resources, and updates</p>
+                        <a href="https://t.me/foundersmonday" target="_blank" class="btn-primary">
+                            <i class="fab fa-telegram"></i> Join Channel
+                        </a>
+                    </div>
+                    
+                    <div class="platform-card">
+                        <div class="platform-icon forum">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <h4>Discussion Forum</h4>
+                        <p>Topic-based discussions and Q&A</p>
+                        <a href="forum/" class="btn-accent">
+                            <i class="fas fa-comments"></i> Visit Forum
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Community Guidelines -->
+                <div class="guidelines-section" style="margin-top: 4rem;">
+                    <h4 class="text-center">Community Guidelines</h4>
+                    <div class="guidelines-list">
+                        <div class="guideline">
+                            <i class="fas fa-handshake"></i>
+                            <h5>Be Respectful</h5>
+                            <p>Treat all members with respect and professionalism.</p>
+                        </div>
+                        <div class="guideline">
+                            <i class="fas fa-lightbulb"></i>
+                            <h5>Share Knowledge</h5>
+                            <p>Contribute valuable insights and experiences.</p>
+                        </div>
+                        <div class="guideline">
+                            <i class="fas fa-users"></i>
+                            <h5>Collaborate</h5>
+                            <p>Support and uplift fellow founders.</p>
+                        </div>
+                        <div class="guideline">
+                            <i class="fas fa-ban"></i>
+                            <h5>No Spam</h5>
+                            <p>Keep discussions relevant and spam-free.</p>
+                        </div>
+                    </div>
+                    <div class="text-center" style="margin-top: 2rem;">
+                        <a href="community-guidelines.html" class="btn-outline">
+                            <i class="fas fa-file-alt"></i> Read Full Guidelines
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Events Section -->
+        <section id="events" class="section light-bg">
+            <div class="container">
+                <h3 class="section-title">Upcoming Events</h3>
+                <div class="events-calendar">
+                    <div class="event-card">
+                        <div class="event-date">
+                            <span class="event-day">15</span>
+                            <span class="event-month">JAN</span>
+                        </div>
+                        <div class="event-details">
+                            <h4>Pitch Perfect Workshop</h4>
+                            <p class="event-time"><i class="far fa-clock"></i> 2:00 PM EAT | Virtual</p>
+                            <p>Learn how to craft the perfect investor pitch with our experts.</p>
+                            <a href="register.html" class="btn-primary">Register Now</a>
+                        </div>
+                    </div>
+                    
+                    <div class="event-card">
+                        <div class="event-date">
+                            <span class="event-day">22</span>
+                            <span class="event-month">JAN</span>
+                        </div>
+                        <div class="event-details">
+                            <h4>Investor Connect Session</h4>
+                            <p class="event-time"><i class="far fa-clock"></i> 3:00 PM EAT | Virtual</p>
+                            <p>Meet angel investors looking for promising startups.</p>
+                            <a href="register.html" class="btn-primary">Register Now</a>
+                        </div>
+                    </div>
+                    
+                    <div class="event-card">
+                        <div class="event-date">
+                            <span class="event-day">29</span>
+                            <span class="event-month">JAN</span>
+                        </div>
+                        <div class="event-details">
+                            <h4>Founder Roundtable</h4>
+                            <p class="event-time"><i class="far fa-clock"></i> 4:00 PM EAT | Virtual</p>
+                            <p>Share challenges and solutions with fellow founders.</p>
+                            <a href="register.html" class="btn-primary">Register Now</a>
+
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- View All Events Link -->
+                <div class="text-center" style="margin-top: 3rem;">
+                    <a href="events.html" class="btn-primary">
+                        <i class="far fa-calendar-alt"></i> View All Events
+                    </a>
+                </div>
+            </div>
+        </section>
+
+                <div class="text-center" style="margin-top: 3rem;">
+                    <h4>How It Works</h4>
+                    <div class="grid" style="margin-top: 2rem;">
+                        <div class="card">
+                            <div class="card-icon">01</div>
+                            <h4>Submit</h4>
+                            <p>Send us your startup details via this form</p>
+                        </div>
+                        <div class="card">
+                            <div class="card-icon">02</div>
+                            <h4>Review</h4>
+                            <p>Our team reviews submissions weekly</p>
+                        </div>
+                        <div class="card">
+                            <div class="card-icon">03</div>
+                            <h4>Feature</h4>
+                            <p>Get featured every Monday</p>
+                        </div>
+                        <div class="card">
+                            <div class="card-icon">04</div>
+                            <h4>Win</h4>
+                            <p>Receive UGX 100,000 prize</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Success Stories -->
+                <div class="success-stories" style="margin-top: 4rem;">
+                    <h4 class="text-center">Success Stories</h4>
+                    <div class="stories-grid">
+                        <div class="story-card">
+                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Success Story">
+                            <h5>John's Tech Startup</h5>
+                            <p>"Being featured helped us secure our first major client!"</p>
+                            <a href="john-tech.html" class="story-link">Read Full Story →</a>
+                        </div>
+                        <div class="story-card">
+                            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Success Story">
+                            <h5>Sarah's AgriBusiness</h5>
+                            <p>"The community support transformed our business model."</p>
+                            <a href="sarah-agri.html" class="story-link">Read Full Story →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Login CTA Section (Replacing the full login section) -->
+        <section id="login-cta" class="section accent-bg">
+            <div class="container">
+                <div class="login-cta-content">
+                    <h3>Ready to Join Our Community?</h3>
+                    <p class="text-center" style="margin-bottom: 2rem;">
+                        Create your account to access exclusive resources, submit your startup for the weekly spotlight, and connect with fellow founders.
+                    </p>
+                    
+                    <div class="cta-buttons-grid">
+                        <div class="cta-button-card">
+                            <div class="cta-icon">
+                                <i class="fas fa-user-plus"></i>
+                            </div>
+                            <h4>New to Founders Monday?</h4>
+                            <p>Create a free account to get started with your entrepreneurial journey.</p>
+                            <a href="register.html" class="btn-primary">
+                                <i class="fas fa-user-plus"></i> Create Account
+                            </a>
+                        </div>
+                        
+                        <div class="cta-button-card">
+                            <div class="cta-icon">
+                                <i class="fas fa-sign-in-alt"></i>
+                            </div>
+                            <h4>Already Have an Account?</h4>
+                            <p>Login to access your dashboard, applications, and community features.</p>
+                            <a href="login.html" class="btn-outline">
+                                <i class="fas fa-sign-in-alt"></i> Login Now
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Account Benefits -->
+                    <div class="account-benefits" style="margin-top: 4rem;">
+                        <h4 class="text-center">Account Benefits</h4>
+                        <div class="benefits-grid">
+                            <div class="benefit">
+                                <i class="fas fa-user-friends"></i>
+                                <h5>Personal Network</h5>
+                                <p>Connect with founders in your industry</p>
+                            </div>
+                            <div class="benefit">
+                                <i class="fas fa-bell"></i>
+                                <h5>Custom Alerts</h5>
+                                <p>Get notified about relevant opportunities</p>
+                            </div>
+                            <div class="benefit">
+                                <i class="fas fa-chart-line"></i>
+                                <h5>Progress Tracking</h5>
+                                <p>Track your application and engagement</p>
+                            </div>
+                            <div class="benefit">
+                                <i class="fas fa-star"></i>
+                                <h5>Exclusive Content</h5>
+                                <p>Access premium resources and events</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="section accent-bg">
+            <div class="container">
+                <h3 class="section-title">What Our Members Say</h3>
+                <div class="testimonials-slider">
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <p>"Founders Monday gave my startup the visibility it needed. The prize money helped us launch our MVP and secure our first major client!"</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="" alt="John Founder">
+                            <div class="author-info">
+                                <h5>John Founder</h5>
+                                <p>Tech Startup Founder</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<!-- Partners Section -->
+<section class="partners-section">
+    <div class="container">
+        <h3 class="section-title">Our Partners</h3>
+        <div class="partners-grid">
+            <div class="partner-item">
+                <div class="partner-logo-container">
+                    <img src="cpace.png" alt="Cpace Technologies LTD">
+                </div>
+                <span class="partner-name">Cpace Technologies LTD</span>
+            </div>
+            <div class="partner-item">
+                <div class="partner-logo-container">
+                    <img src="" alt="Y Combinator">
+                </div>
+                <span class="">Y Combinator</span>
+            </div>
+            <div class="partner-item">
+                <div class="partner-logo-container">
+                    <img src="" alt="Google for Startups">
+                </div>
+                <span class="partner-name">Google for Startups</span>
+            </div>
+            <div class="partner-item">
+                <div class="partner-logo-container">
+                    <img src="" alt="AWS Activate">
+                </div>
+                <span class="partner-name">AWS Activate</span>
+            </div>
+        </div>
+    </div>
+</section>
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Ready to Launch Your Startup to the Next Level?</h2>
+                    <p>Join thousands of founders who have accelerated their journey with Founders Monday Global.</p>
+                    <div class="cta-buttons">
+                        <a href="get-featured.html" class="btn-primary">
+                            <i class="fas fa-rocket"></i> Apply Now
+                        </a>
+                        <a href="contact.html" class="btn-outline">
+                            <i class="fas fa-envelope"></i> Contact Us
+                        </a>
+                        <a href="register.html" class="btn-accent">
+                            <i class="fas fa-user-plus"></i> Create Account
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <h4>Founders Monday</h4>
+                    <p>Empowering startup founders globally every Monday through spotlight features, community building, and prize support.</p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/foundersmondayglobal" target="_blank" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://x.com/NaddambaL70150" target="_blank" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://linkedin.com/company/founders-monday" target="_blank" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://youtube.com/@foundersmonday" target="_blank" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://facebook.com/foundersmonday" target="_blank" aria-label="Facebook">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="#about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                        <li><a href="#resources"><i class="fas fa-book"></i> Resources</a></li>
+                        <li><a href="#spotlight"><i class="fas fa-star"></i> Founder Spotlight</a></li>
+                        <li><a href="#winners"><i class="fas fa-trophy"></i> Recent Winners</a></li>
+                        <li><a href="#events"><i class="fas fa-calendar-alt"></i> Events</a></li>
+                        <li><a href="get-featured.html"><i class="fas fa-rocket"></i> Apply Now</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Account</h4>
+                    <ul class="footer-links">
+                        <li><a href="login.html"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+                        <li><a href="register.html"><i class="fas fa-user-plus"></i> Register</a></li>
+                        <li><a href="profile.html"><i class="fas fa-user-circle"></i> My Profile</a></li>
+                        <li><a href="dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                        <li><a href="forgot-password.html"><i class="fas fa-key"></i> Forgot Password</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="terms.html"><i class="fas fa-file-contract"></i> Terms of Service</a></li>
+                        <li><a href="privacy-policy.html"><i class="fas fa-shield-alt"></i> Privacy Policy</a></li>
+                        <li><a href="cookie-policy.html"><i class="fas fa-cookie"></i> Cookie Policy</a></li>
+                        <li><a href="code-of-conduct.html"><i class="fas fa-users"></i> Code of Conduct</a></li>
+                        <li><a href="disclaimer.html"><i class="fas fa-exclamation-triangle"></i> Disclaimer</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Contact Info</h4>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:hello@foundersmonday.com">hello@foundersmonday.com</a></li>
+                        <li><i class="fas fa-globe"></i> <a href="https://foundersmonday.com">www.foundersmonday.com</a></li>
+                        <li><i class="fab fa-whatsapp"></i> <a href="https://chat.whatsapp.com/Kliov7hj0QV6oG9JiuAorq" target="_blank">Join WhatsApp Group</a></li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+256740754608">+256 740 754 608</a></li>
+                        <li><i class="fas fa-map-marker-alt"></i> Kampala, Uganda</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-newsletter">
+                <h4>Stay Updated</h4>
+                <p>Subscribe to our newsletter for the latest updates</p>
+                <form class="footer-newsletter-form">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit" class="btn-accent">Subscribe</button>
+                </form>
+
+    <div class="validation-message" aria-live="polite"></div>
+    <p id="newsletter-hint" class="sr-only">
+        Enter your email to receive weekly updates and founder insights
+    </p>
+</form>
+            </div>
+            
+            <div class="copyright">
+                <p>© <span id="currentYear">2026</span> Founders Monday Global Support. All rights reserved. | Weekly Prize: UGX 100,000</p>
+                <p>Designed with <i class="fas fa-heart" style="color: #D4AF37;"></i> for the global founder community</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cookie Consent Banner -->
+    <div id="cookieConsent" class="cookie-consent">
+        <div class="cookie-content">
+            <p>We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.</p>
+            <div class="cookie-buttons">
+                <button id="acceptCookies" class="btn-accept">Accept</button>
+                <button id="rejectCookies" class="btn-reject">Reject</button>
+                <a href="cookie-policy.html" class="cookie-link">Learn More</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <!-- JavaScript Files -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/forms.js"></script>
+    <script src="animations.js"></script>
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    
+    <!-- Inline JavaScript for critical functionality -->
+    <script>
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const nav = document.querySelector('.nav');
+            nav.classList.toggle('mobile-open');
+        }
+
+        // Language change
+        function changeLanguage(lang) {
+            console.log('Changing language to:', lang);
+            alert('Language changed to ' + lang + '. In production, this would load the appropriate translations.');
+        }
+
+        // Back to top button
+        window.addEventListener('scroll', function() {
+            const backToTop = document.getElementById('backToTop');
+            if (window.scrollY > 300) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        // Initialize when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set current year in footer
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+            
+            // Animate stats
+            animateCounter('activeUsers', 500, '+');
+            animateCounter('totalWinners', 52);
+            animateCounter('countries', 15, '+');
+        });
+
+        // Simple counter animation
+        function animateCounter(elementId, target, suffix = '') {
+            const element = document.getElementById(elementId);
+            let current = 0;
+            const increment = target / 50;
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    current = target;
+                    clearInterval(timer);
+                }
+                element.textContent = Math.floor(current) + suffix;
+            }, 30);
+        }
+    </script>
+</body>
+</html>

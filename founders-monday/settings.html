@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings | Founders Monday Global</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚙️</text></svg>">
+    
+    <meta name="description" content="Manage your account settings, preferences, and security.">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+
+                </div>
+                
+                <nav class="nav">
+                    <a href="index.html"><i class="fas fa-home"></i> Home</a>
+                    <a href="index.html#community"><i class="fas fa-users"></i> Community</a>
+                    <a href="events.html"><i class="fas fa-calendar-alt"></i> Events</a>
+                    <a href="get-featured.html"><i class="fas fa-rocket"></i> Apply Now</a>
+                    
+                    <!-- Profile Dropdown -->
+                    <div class="nav-dropdown">
+                        <a href="#" class="nav-dropdown-toggle profile-toggle">
+                            <i class="fas fa-chevron-down"></i>
+                        </a>
+                        <div class="nav-dropdown-menu">
+                            <a href="portifolio.html"><i class="fas fa-user"></i> My Profile</a>
+                            <a href="applications.html"><i class="fas fa-file-alt"></i> Applications</a>
+                            <a href="startups.html"><i class="fas fa-briefcase"></i> My Startups</a>
+                            <a href="settings.html" class="active"><i class="fas fa-cog"></i> Settings</a>
+                            <div class="dropdown-divider"></div>
+                            <a href="logout.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                        </div>
+                    </div>
+                </nav>
+                
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <div class="page-header-content">
+                    <h1>Settings</h1>
+                    <p>Manage your account, preferences, and security settings</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Settings Content -->
+        <div class="settings-content">
+            <div class="container">
+                <div class="settings-grid">
+                    <!-- Left Navigation -->
+                    <div class="settings-nav">
+                        <button class="settings-nav-btn active" data-section="account">
+                            <i class="fas fa-user-cog"></i>
+                            <span>Account Settings</span>
+                        </button>
+                        <button class="settings-nav-btn" data-section="profile">
+                            <i class="fas fa-id-card"></i>
+                            <span>Profile Information</span>
+                        </button>
+                        <button class="settings-nav-btn" data-section="notifications">
+                            <i class="fas fa-bell"></i>
+                            <span>Notifications</span>
+                        </button>
+                        <button class="settings-nav-btn" data-section="security">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Security</span>
+                        </button>
+                        <button class="settings-nav-btn" data-section="privacy">
+                            <i class="fas fa-lock"></i>
+                            <span>Privacy</span>
+                        </button>
+                        <button class="settings-nav-btn" data-section="integrations">
+                            <i class="fas fa-plug"></i>
+                            <span>Integrations</span>
+                        </button>
+                        <button class="settings-nav-btn" data-section="billing">
+                            <i class="fas fa-credit-card"></i>
+                            <span>Billing & Plans</span>
+                        </button>
+                    </div>
+
+                    <!-- Right Content -->
+                    <div class="settings-panels">
+                        <!-- Account Settings -->
+                        <div class="settings-panel active" id="account-panel">
+                            <div class="panel-header">
+                                <h2><i class="fas fa-user-cog"></i> Account Settings</h2>
+                                <p>Manage your basic account information and preferences</p>
+                            </div>
+                            
+                            <div class="panel-body">
+                                <form id="accountForm">
+                                    <div class="form-section">
+                                        <h3>Basic Information</h3>
+                                        <div class="form-grid">
+                                            <div class="form-group">
+                                                <label>Full Name</label>
+                                                <input type="text" value="John Founder" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Email Address</label>
+                                                <input type="email" value="john@agritechuganda.com" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Phone Number</label>
+                                                <input type="tel" value="+256 700 000 000">
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Time Zone</label>
+                                                <select>
+                                                    <option>East Africa Time (EAT)</option>
+                                                    <option>West Africa Time (WAT)</option>
+                                                    <option>GMT</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-section">
+                                        <h3>Communication Preferences</h3>
+                                        <div class="checkbox-group">
+                                            <label class="checkbox-item">
+                                                <input type="checkbox" checked>
+                                                <span>Weekly newsletter with founder tips</span>
+                                            </label>
+                                            <label class="checkbox-item">
+                                                <input type="checkbox" checked>
+                                                <span>Event announcements and invitations</span>
+                                            </label>
+                                            <label class="checkbox-item">
+                                                <input type="checkbox" checked>
+                                                <span>Application status updates</span>
+                                            </label>
+                                            <label class="checkbox-item">
+                                                <input type="checkbox">
+                                                <span>Marketing and promotional emails</span>
+                                            </label>
+                                            <label class="checkbox-item">
+                                                <input type="checkbox" checked>
+                                                <span>Community announcements</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-actions">
+                                        <button type="button" class="btn-outline" onclick="resetForm()">
+                                            Cancel
+                                        </button>
+                                        <button type="submit" class="btn-primary">
+                                            Save Changes
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <!-- Profile Information -->
+                        <div class="settings-panel" id="profile-panel">
+                            <div class="panel-header">
+                                <h2><i class="fas fa-id-card"></i> Profile Information</h2>
+                                <p>Customize your public profile and bio</p>
+                            </div>
+                            
+                            <div class="panel-body">
+                                <form id="profileForm">
+                                    <div class="form-section">
+                                        <h3>Profile Picture</h3>
+                                        <div class="avatar-upload">
+                                            <div class="avatar-preview">
+                                                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Current Avatar">
+                                            </div>
+                                            <div class="avatar-actions">
+                                                <button type="button" class="btn-outline">
+                                                    <i class="fas fa-camera"></i> Change Photo
+                                                </button>
+                                                <button type="button" class="btn-outline">
+                                                    <i class="fas fa-trash"></i> Remove
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-section">
+                                        <h3>Professional Information</h3>
+                                        <div class="form-group">
+                                            <label>Professional Title</label>
+                                            <input type="text" value="CEO & Founder at AgriTech Uganda">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Bio/About Me</label>
+                                            <textarea rows="4">Passionate entrepreneur building AgriTech Uganda to connect smallholder farmers with markets using mobile technology. Focused on creating sustainable impact in African agriculture.</textarea>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-section">
+                                        <h3>Social Links</h3>
+                                        <div class="form-grid">
+                                            <div class="form-group">
+                                                <label><i class="fab fa-linkedin"></i> LinkedIn URL</label>
+                                                <input type="url" placeholder="https://linkedin.com/in/yourprofile">
+                                            </div>
+                                            <div class="form-group">
+                                                <label><i class="fab fa-twitter"></i> Twitter/X URL</label>
+                                                <input type="url" placeholder="https://twitter.com/yourprofile">
+                                            </div>
+                                            <div class="form-group">
+                                                <label><i class="fas fa-globe"></i> Personal Website</label>
+                                                <input type="url" placeholder="https://yourwebsite.com">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-actions">
+                                        <button type="button" class="btn-outline">
+                                            Cancel
+                                        </button>
+                                        <button type="submit" class="btn-primary">
+                                            Update Profile
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <!-- Notifications -->
+                        <div class="settings-panel" id="notifications-panel">
+                            <div class="panel-header">
+                                <h2><i class="fas fa-bell"></i> Notification Settings</h2>
+                                <p>Control how and when you receive notifications</p>
+                            </div>
+                            
+                            <div class="panel-body">
+                                <div class="notification-category">
+                                    <h3>Email Notifications</h3>
+                                    <div class="toggle-group">
+                                        <div class="toggle-item">
+                                            <div class="toggle-info">
+                                                <h4>Application Updates</h4>
+                                                <p>Get notified when your application status changes</p>
+                                            </div>
+                                            <label class="toggle-switch">
+                                                <input type="checkbox" checked>
+                                                <span class="slider"></span>
+                                            </label>
+                                        </div>
+                                        <div class="toggle-item">
+                                            <div class="toggle-info">
+                                                <h4>Event Reminders</h4>
+                                                <p>Reminders for upcoming events you registered for</p>
+                                            </div>
+                                            <label class="toggle-switch">
+                                                <input type="checkbox" checked>
+                                                <span class="slider"></span>
+                                            </label>
+                                        </div>
+                                        <div class="toggle-item">
+                                            <div class="toggle-info">
+                                                <h4>Community Announcements</h4>
+                                                <p>Important updates from the Founders Monday community</p>
+                                            </div>
+                                            <label class="toggle-switch">
+                                                <input type="checkbox" checked>
+                                                <span class="slider"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="notification-category">
+                                    <h3>Push Notifications</h3>
+                                    <div class="toggle-group">
+                                        <div class="toggle-item">
+                                            <div class="toggle-info">
+                                                <h4>New Messages</h4>
+                                                <p>Notify me when I receive new messages</p>
+                                            </div>
+                                            <label class="toggle-switch">
+                                                <input type="checkbox">
+                                                <span class="slider"></span>
+                                            </label>
+                                        </div>
+                                        <div class="toggle-item">
+                                            <div class="toggle-info">
+                                                <h4>Event Reminders</h4>
+                                                <p>Send push notifications for upcoming events</p>
+                                            </div>
+                                            <label class="toggle-switch">
+                                                <input type="checkbox" checked>
+                                                <span class="slider"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="notification-category">
+                                    <h3>Frequency Settings</h3>
+                                    <div class="form-group">
+                                        <label>Email Digest Frequency</label>
+                                        <select>
+                                            <option>Daily</option>
+                                            <option selected>Weekly</option>
+                                            <option>Monthly</option>
+                                            <option>Never</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-actions">
+                                    <button class="btn-primary" onclick="saveNotifications()">
+                                        Save Notification Settings
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Security -->
+                        <div class="settings-panel" id="security-panel">
+                            <div class="panel-header">
+                                <h2><i class="fas fa-shield-alt"></i> Security Settings</h2>
+                                <p>Manage your account security and password</p>
+                            </div>
+                            
+                            <div class="panel-body">
+                                <div class="security-section">
+                                    <h3>Change Password</h3>
+                                    <form id="passwordForm">
+                                        <div class="form-group">
+                                            <label>Current Password</label>
+                                            <input type="password" placeholder="Enter current password">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>New Password</label>
+                                            <input type="password" placeholder="Enter new password">
+                                            <div class="password-strength">
+                                                <div class="strength-bar"></div>
+                                                <span class="strength-text">Password strength</span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Confirm New Password</label>
+                                            <input type="password" placeholder="Confirm new password">
+                                        </div>
+                                        <button type="submit" class="btn-primary">
+                                            Update Password
+                                        </button>
+                                    </form>
+                                </div>
+                                
+                                <div class="security-section">
+                                    <h3>Two-Factor Authentication</h3>
+                                    <div class="two-factor-status">
+                                        <div class="status-info">
+                                            <i class="fas fa-shield-alt"></i>
+                                            <div>
+                                                <h4>Two-Factor Authentication</h4>
+                                                <p>Add an extra layer of security to your account</p>
+                                            </div>
+                                        </div>
+                                        <button class="btn-outline" onclick="setup2FA()">
+                                            Enable 2FA
+                                        </button>
+                                    </div>
+                                </div>
+                                
+                                <div class="security-section">
+                                    <h3>Active Sessions</h3>
+                                    <div class="sessions-list">
+                                        <div class="session-item current">
+                                            <div class="session-info">
+                                                <h4>Current Session</h4>
+                                                <p>Chrome on Windows • Kampala, Uganda</p>
+                                                <span class="session-time">Active now</span>
+                                            </div>
+                                            <span class="session-status">Current</span>
+                                        </div>
+                                        <div class="session-item">
+                                            <div class="session-info">
+                                                <h4>Mobile App</h4>
+                                                <p>iOS • Safari on iPhone</p>
+                                                <span class="session-time">Last active: 2 hours ago</span>
+                                            </div>
+                                            <button class="btn-outline btn-sm" onclick="revokeSession('mobile')">
+                                                Revoke
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <button class="btn-outline" onclick="revokeAllSessions()">
+                                        <i class="fas fa-sign-out-alt"></i> Sign Out All Other Sessions
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <h4>Founders Monday</h4>
+                    <p>Empowering startup founders globally every Monday.</p>
+                </div>
+                <div>
+                    <h4>Account</h4>
+                    <ul class="footer-links">
+                        <li><a href="profile.html">My Profile</a></li>
+                        <li><a href="my-applications.html">Applications</a></li>
+                        <li><a href="my-startups.html">My Startups</a></li>
+                        <li><a href="settings.html" class="active">Settings</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2025 Founders Monday Global Support. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Settings navigation
+        document.querySelectorAll('.settings-nav-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                // Update active button
+                document.querySelectorAll('.settings-nav-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                
+                // Show corresponding panel
+                const section = this.getAttribute('data-section');
+                document.querySelectorAll('.settings-panel').forEach(panel => panel.classList.remove('active'));
+                document.getElementById(`${section}-panel`).classList.add('active');
+            });
+        });
+
+        // Form submission
+        document.querySelectorAll('form').forEach(form => {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Settings saved successfully!');
+            });
+        });
+
+        function resetForm() {
+            if (confirm('Are you sure you want to discard changes?')) {
+                document.getElementById('accountForm').reset();
+            }
+        }
+
+        function saveNotifications() {
+            alert('Notification settings saved!');
+        }
+
+        function setup2FA() {
+            alert('Two-factor authentication setup would open here');
+        }
+
+        function revokeSession(sessionId) {
+            if (confirm('Revoke this session?')) {
+                alert(`Session ${sessionId} revoked`);
+            }
+        }
+
+        function revokeAllSessions() {
+            if (confirm('Sign out from all other devices?')) {
+                alert('All other sessions have been signed out');
+            }
+        }
+    </script>
+</body>
+</html>

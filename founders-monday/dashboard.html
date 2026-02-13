@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Founders Monday Global</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/apexcharts@3.35.0/dist/apexcharts.css">
+</head>
+<body>
+    <!-- Header with same navigation as profile.html -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+
+                </div>
+                
+                <nav class="nav">
+                    <a href="index.html"><i class="fas fa-home"></i> Home</a>
+                    <a href="index.html#about"><i class="fas fa-info-circle"></i> About</a>
+                    <a href="index.html#resources"><i class="fas fa-book"></i> Resources</a>
+                    <a href="index.html#spotlight"><i class="fas fa-star"></i> Spotlight</a>
+                    <a href="get-featured.html"><i class="fas fa-rocket"></i> Apply Now</a>
+                    
+                    <div class="nav-dropdown">
+                        <a href="#" class="nav-dropdown-toggle">
+                            <i class="fas fa-user-circle"></i> My Account <i class="fas fa-chevron-down"></i>
+                        </a>
+                        <div class="nav-dropdown-menu">
+                            <a href="dashboard.html" class="active"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+                            <a href="portifolio.html"><i class="fas fa-user"></i> My Profile</a>
+                            <a href="applications.html"><i class="fas fa-file-alt"></i> Applications</a>
+                            <a href="startups.html"><i class="fas fa-briefcase"></i> My Startups</a>
+                            <a href="settings.html"><i class="fas fa-cog"></i> Settings</a>
+                            <div class="dropdown-divider"></div>
+                            <a href="logout.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                        </div>
+                    </div>
+                </nav>
+                
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <div class="container">
+            <!-- Dashboard Header -->
+            <div class="dashboard-header">
+                <h1><i class="fas fa-tachometer-alt"></i> Dashboard</h1>
+                <div class="dashboard-actions">
+                    <button class="btn-primary" onclick="window.location.href='index.html#get-featured'">
+                        <i class="fas fa-plus"></i> New Application
+                    </button>
+                    <button class="btn-outline" onclick="window.location.href='my-startups.html'">
+                        <i class="fas fa-plus"></i> Add Startup
+                    </button>
+                </div>
+            </div>
+
+            <!-- Quick Stats -->
+            <div class="dashboard-stats">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>5</h3>
+                        <p>Total Applications</p>
+                    </div>
+                    <a href="my-applications.html" class="stat-link">View All <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>2</h3>
+                        <p>Active Startups</p>
+                    </div>
+                    <a href="my-startups.html" class="stat-link">View All <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>1</h3>
+                        <p>Awards Won</p>
+                    </div>
+                    <a href="awards.html" class="stat-link">View All <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>156</h3>
+                        <p>Connections</p>
+                    </div>
+                    <a href="connections.html" class="stat-link">View All <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Main Dashboard Content -->
+            <div class="dashboard-content">
+                <!-- Left Column -->
+                <div class="dashboard-column">
+                    <!-- Recent Applications -->
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h3><i class="fas fa-file-alt"></i> Recent Applications</h3>
+                            <a href="my-applications.html" class="view-all">View All</a>
+                        </div>
+                        <div class="applications-list">
+                            <div class="application-item">
+                                <div class="application-info">
+                                    <h4>AgriTech Uganda</h4>
+                                    <p class="application-date">Submitted: Dec 15, 2024</p>
+                                    <div class="application-status status-pending">
+                                        <i class="fas fa-clock"></i> Under Review
+                                    </div>
+                                </div>
+                                <div class="application-actions">
+                                    <a href="application-details.html" class="btn-small">View</a>
+                                    <a href="edit-application.html" class="btn-small btn-outline">Edit</a>
+                                </div>
+                            </div>
+                            
+                            <div class="application-item">
+                                <div class="application-info">
+                                    <h4>FinEase Pay</h4>
+                                    <p class="application-date">Submitted: Nov 28, 2024</p>
+                                    <div class="application-status status-approved">
+                                        <i class="fas fa-check-circle"></i> Approved
+                                    </div>
+                                </div>
+                                <div class="application-actions">
+                                    <a href="application-details.html" class="btn-small">View</a>
+                                    <button class="btn-small btn-success" disabled>Featured</button>
+                                </div>
+                            </div>
+                            
+                            <div class="application-item">
+                                <div class="application-info">
+                                    <h4>HealthHub Africa</h4>
+                                    <p class="application-date">Submitted: Nov 10, 2024</p>
+                                    <div class="application-status status-rejected">
+                                        <i class="fas fa-times-circle"></i> Not Selected
+                                    </div>
+                                </div>
+                                <div class="application-actions">
+                                    <a href="application-details.html" class="btn-small">View</a>
+                                    <a href="edit-application.html" class="btn-small btn-outline">Edit & Resubmit</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Upcoming Events -->
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h3><i class="fas fa-calendar-alt"></i> Upcoming Events</h3>
+                            <a href="events.html" class="view-all">View All</a>
+                        </div>
+                        <div class="events-list">
+                            <div class="event-item">
+                                <div class="event-date">
+                                    <span class="event-day">22</span>
+                                    <span class="event-month">JAN</span>
+                                </div>
+                                <div class="event-details">
+                                    <h4>Investor Connect Session</h4>
+                                    <p class="event-time"><i class="far fa-clock"></i> 3:00 PM EAT | Virtual</p>
+                                    <a href="#" class="event-status registered">Registered</a>
+                                </div>
+                            </div>
+                            
+                            <div class="event-item">
+                                <div class="event-date">
+                                    <span class="event-day">15</span>
+                                    <span class="event-month">JAN</span>
+                                </div>
+                                <div class="event-details">
+                                    <h4>Pitch Perfect Workshop</h4>
+                                    <p class="event-time"><i class="far fa-clock"></i> 2:00 PM EAT | Virtual</p>
+                                    <a href="#" class="event-status not-registered">Register Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column -->
+                <div class="dashboard-column">
+                    <!-- Quick Actions -->
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h3><i class="fas fa-bolt"></i> Quick Actions</h3>
+                        </div>
+                        <div class="quick-actions">
+                            <a href="index.html#get-featured" class="quick-action">
+                                <i class="fas fa-paper-plane"></i>
+                                <span>Submit Application</span>
+                            </a>
+                            <a href="profile.html" class="quick-action">
+                                <i class="fas fa-user-edit"></i>
+                                <span>Update Profile</span>
+                            </a>
+                            <a href="resources.html" class="quick-action">
+                                <i class="fas fa-download"></i>
+                                <span>Download Resources</span>
+                            </a>
+                            <a href="community.html" class="quick-action">
+                                <i class="fas fa-users"></i>
+                                <span>Join Community</span>
+                            </a>
+                            <a href="messages.html" class="quick-action">
+                                <i class="fas fa-envelope"></i>
+                                <span>Check Messages</span>
+                            </a>
+                            <a href="settings.html" class="quick-action">
+                                <i class="fas fa-cog"></i>
+                                <span>Account Settings</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Activity Progress -->
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h3><i class="fas fa-chart-line"></i> Profile Completion</h3>
+                            <span class="progress-percent">85%</span>
+                        </div>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar" style="width: 85%"></div>
+                        </div>
+                        <div class="completion-checklist">
+                            <div class="checklist-item completed">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Basic Information</span>
+                            </div>
+                            <div class="checklist-item completed">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Profile Picture</span>
+                            </div>
+                            <div class="checklist-item completed">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Startup Details</span>
+                            </div>
+                            <div class="checklist-item">
+                                <i class="far fa-circle"></i>
+                                <span>Portfolio Items</span>
+                            </div>
+                            <div class="checklist-item">
+                                <i class="far fa-circle"></i>
+                                <span>Social Links</span>
+                            </div>
+                        </div>
+                        <a href="profile.html" class="btn-outline" style="width: 100%; margin-top: 1rem;">
+                            <i class="fas fa-edit"></i> Complete Profile
+                        </a>
+                    </div>
+
+                    <!-- Notifications -->
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h3><i class="fas fa-bell"></i> Recent Notifications</h3>
+                            <a href="notifications.html" class="view-all">View All</a>
+                        </div>
+                        <div class="notifications-list">
+                            <div class="notification-item unread">
+                                <div class="notification-icon">
+                                    <i class="fas fa-trophy"></i>
+                                </div>
+                                <div class="notification-content">
+                                    <p><strong>Congratulations!</strong> Your application has been shortlisted</p>
+                                    <span class="notification-time">2 hours ago</span>
+                                </div>
+                            </div>
+                            
+                            <div class="notification-item">
+                                <div class="notification-icon">
+                                    <i class="fas fa-comment"></i>
+                                </div>
+                                <div class="notification-content">
+                                    <p>You have 3 new messages in the community</p>
+                                    <span class="notification-time">1 day ago</span>
+                                </div>
+                            </div>
+                            
+                            <div class="notification-item">
+                                <div class="notification-icon">
+                                    <i class="fas fa-calendar"></i>
+                                </div>
+                                <div class="notification-content">
+                                    <p>Upcoming event: Pitch Perfect Workshop tomorrow</p>
+                                    <span class="notification-time">2 days ago</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Community Stats -->
+            <div class="dashboard-card full-width">
+                <div class="card-header">
+                    <h3><i class="fas fa-chart-bar"></i> Community Engagement</h3>
+                </div>
+                <div class="community-stats">
+                    <div class="community-stat">
+                        <div class="stat-value">45</div>
+                        <div class="stat-label">Posts Made</div>
+                    </div>
+                    <div class="community-stat">
+                        <div class="stat-value">128</div>
+                        <div class="stat-label">Comments</div>
+                    </div>
+                    <div class="community-stat">
+                        <div class="stat-value">12</div>
+                        <div class="stat-label">Resources Shared</div>
+                    </div>
+                    <div class="community-stat">
+                        <div class="stat-value">3</div>
+                        <div class="stat-label">Events Attended</div>
+                    </div>
+                    <div class="community-stat">
+                        <div class="stat-value">156</div>
+                        <div class="stat-label">Connections Made</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer (same as profile.html) -->
+    <footer class="footer">
+        <!-- Same footer content as profile.html -->
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts@3.35.0"></script>
+    <script>
+        // Dashboard-specific JavaScript
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mark notification as read when clicked
+            document.querySelectorAll('.notification-item').forEach(item => {
+                item.addEventListener('click', function() {
+                    this.classList.remove('unread');
+                });
+            });
+            
+            // Initialize charts (if needed)
+            // const options = {...};
+            // const chart = new ApexCharts(document.querySelector("#chart"), options);
+            // chart.render();
+        });
+    </script>
+</body>
+</html>

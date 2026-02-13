@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logout | Founders Monday Global</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👋</text></svg>">
+    
+    <meta name="description" content="Logout from Founders Monday Global. See you soon!">
+</head>
+<body>
+    <!-- Header (Minimal for logout page) -->
+    <header class="header logout-header">
+        <div class="container">
+            <div class="header-content">
+
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content" class="logout-main">
+        <div class="container">
+            <div class="logout-container">
+                <div class="logout-icon">
+                    <i class="fas fa-sign-out-alt"></i>
+                </div>
+                
+                <h1>Logging Out</h1>
+                <p class="logout-message">You are being logged out of your account...</p>
+                
+                <div class="logout-progress">
+                    <div class="progress-bar">
+                        <div class="progress-fill"></div>
+                    </div>
+                    <span class="progress-text">Please wait</span>
+                </div>
+                
+                <div class="logout-options">
+                    <p>Take me back to:</p>
+                    <div class="option-buttons">
+                        <a href="index.html" class="btn-primary">
+                            <i class="fas fa-home"></i> Homepage
+                        </a>
+                        <a href="login.html" class="btn-outline">
+                            <i class="fas fa-sign-in-alt"></i> Login Again
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="logout-tips">
+                    <h3><i class="fas fa-lightbulb"></i> Quick Tips</h3>
+                    <ul>
+                        <li>Clear your browser cache for better security</li>
+                        <li>Enable two-factor authentication for extra security</li>
+                        <li>Keep your login credentials safe and private</li>
+                        <li>Check our community for latest updates</li>
+                    </ul>
+                </div>
+                
+                <div class="logout-feedback">
+                    <p>How was your experience today?</p>
+                    <div class="feedback-emoji">
+                        <button class="emoji-btn" onclick="submitFeedback('bad')">😞</button>
+                        <button class="emoji-btn" onclick="submitFeedback('neutral')">😐</button>
+                        <button class="emoji-btn" onclick="submitFeedback('good')">😊</button>
+                        <button class="emoji-btn" onclick="submitFeedback('great')">🤩</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer logout-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <h4>Founders Monday</h4>
+                    <p>Empowering startup founders globally every Monday.</p>
+                </div>
+                <div class="security-note">
+                    <p><i class="fas fa-shield-alt"></i> You have been securely logged out</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2025 Founders Monday Global Support. All rights reserved.</p>
+                <p>See you again soon!</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simulate logout process
+        setTimeout(() => {
+            document.querySelector('.logout-message').textContent = 'You have been successfully logged out!';
+            document.querySelector('.progress-fill').style.width = '100%';
+            document.querySelector('.progress-text').textContent = 'Complete';
+            
+            // Clear session data (in a real app)
+            sessionStorage.clear();
+            localStorage.removeItem('userToken');
+            
+            // Redirect after delay
+            setTimeout(() => {
+                window.location.href = 'index.html';
+            }, 3000);
+        }, 2000);
+
+        function submitFeedback(rating) {
+            const emojis = {
+                'bad': '😞',
+                'neutral': '😐',
+                'good': '😊',
+                'great': '🤩'
+            };
+            
+            alert(`Thank you for your feedback! ${emojis[rating]}`);
+            
+            // In a real app, send this to your analytics/feedback system
+            console.log(`User feedback: ${rating}`);
+        }
+    </script>
+</body>
+</html>
